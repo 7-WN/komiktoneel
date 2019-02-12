@@ -1,0 +1,22 @@
+{
+  "name": "komiktoneel.be",
+  "version": "1.0.0",
+  "description": "Broncode voor de website van toneel vereniging Komiktoneel uit Ranst",
+  "main": "src/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7-WN/komiktoneel.git"
+  },
+  "author": "[7WN] (https://7wn.be/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7-WN/komiktoneel/issues"
+  },
+  "homepage": "https://github.com/7-WN/komiktoneel#readme"
+}
