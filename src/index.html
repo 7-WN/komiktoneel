@@ -24,45 +24,41 @@
       href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto"
       rel="stylesheet"
     />
-
   </head>
   <body>
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="./index.html">
-            <img src="./images/logo zwartwit.png" alt="Logo komiktoneel" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="./index.html"
-                >Home <span class="sr-only">(current)</span></a
-              >
-              <a class="nav-item nav-link" href="./over.html">Over</a>
-              <a class="nav-item nav-link" href="./reserveren.html"
-                >Reserveren</a
-              >
-              <a class="nav-item nav-link" href="./voorstellingen.html"
-                >Voorstellingen</a
-              >
-              <a class="nav-item nav-link" href="./album.html">Foto's</a>
-              <a class="nav-item nav-link" href="./contact.html">Contact</a>
-            </div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./images/logo zwartwit.png" alt="Logo komiktoneel" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="./index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+            <a class="nav-item nav-link" href="./over.html">Over</a>
+            <a class="nav-item nav-link" href="./reserveren.html">Reserveren</a>
+            <a class="nav-item nav-link" href="./voorstellingen.html"
+              >Voorstellingen</a
+            >
+            <a class="nav-item nav-link" href="./album.html">Foto's</a>
+            <a class="nav-item nav-link" href="./contact.html">Contact</a>
           </div>
-        </nav>
-      </header>
-      <div class="container">
-
+        </div>
+      </nav>
+    </header>
+    <div class="container">
       <main>
         <section class="hero-image">
           <img class="hero-image" src="./images/Hero.jpg" alt="Foto" />
@@ -94,34 +90,40 @@
           </p>
 
           <form class="form-inline position">
-            <div class="form-group">
-              <div class="col-12 col-sm-2">
-                <label class="box" for="Aantal">Aantal</label>
-                <input
-                  class="form-control formulier"
-                  type="number"
-                  name="seats"
-                  max="40"
-                  min="1"
-                />
+            <div class="row">
+              <div class="form-group">
+                <div class="col-12 col-sm-4">
+                  <div class="input-group-prepend">
+                    <label class="box" for="Aantal">Aantal</label>
+                    <input
+                      class="form-control formulier"
+                      type="number"
+                      name="seats"
+                      max="40"
+                      min="1"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <div class="col-12 col-sm-10">
-                <label class="box" for="Datum">Dag</label>
-                <select class="custom-select formulier" name="Datum">
-                  <option value="keuze" disabled selected>
-                    Kies een datum
-                  </option>
-                  <option value="Dag1"> vrijdag 2 februari </option>
-                  <option value="Dag2"> zaterdag 3 februari </option>
-                  <option value="Dag3"> zondag 4 februari </option>
-                  <option value="Dag4"> vrijdag 9 februari </option>
-                  <option value="Dag5"> zaterdag 10 februari </option>
-                  <option value="Dag6"> zondag 11 februari </option>
-                  <option value="Dag7"> zaterdag 16 februari </option>
-                  <option value="Dag8"> zondag 17 februari </option>
-                </select>
+              <div class="form-group">
+                <div class="col-12 col-sm-12">
+                  <div class="input-group-prepend">
+                    <label class="box" for="Datum">Dag</label>
+                    <select class="custom-select formulier" name="Datum">
+                      <option value="keuze" disabled selected>
+                        Kies een datum
+                      </option>
+                      <option value="Dag1"> vrijdag 2 februari </option>
+                      <option value="Dag2"> zaterdag 3 februari </option>
+                      <option value="Dag3"> zondag 4 februari </option>
+                      <option value="Dag4"> vrijdag 9 februari </option>
+                      <option value="Dag5"> zaterdag 10 februari </option>
+                      <option value="Dag6"> zondag 11 februari </option>
+                      <option value="Dag7"> zaterdag 16 februari </option>
+                      <option value="Dag8"> zondag 17 februari </option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
@@ -129,10 +131,9 @@
           <button id="plaats" class="button">Snel reserveren!</button>
           <button class="buttonreverse">meer weten</button>
         </section>
-      </div>
-
       </main>
-      <footer></footer>
+    </div>
+    <footer></footer>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
