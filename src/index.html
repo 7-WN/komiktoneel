@@ -1,12 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Komiktoneel</title>
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./images/logo zwartwit.png" alt="Logo komiktoneel" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="./index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+            <a class="nav-item nav-link" href="./over.html">Over</a>
+            <a class="nav-item nav-link" href="./reserveren.html">Reserveren</a>
+            <a class="nav-item nav-link" href="./voorstellingen.html"
+              >Voorstellingen</a
+            >
+            <a class="nav-item nav-link" href="./album.html">Foto's</a>
+            <a class="nav-item nav-link" href="./contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-image">
+        <img class="hero-image" src="./images/Hero.jpg" alt="Foto" />
+        <div class="hero-text">
+          <h1>Komik Toneel</h1>
+        </div>
+        <div class="hero-text2">
+          <p>Volgend stuk</p>
+          <p span style="font-size:2rem;">Tom, Dick & Harry</p>
+          <button class="button">Reserveer nu</button>
+        </div>
+      </section>
+
+      <section class="reservatie">
+        <img
+          class="foto"
+          src="./images/Affiche TomDickHarry.png"
+          alt="Affiche huidige toneel"
+        />
+        <p class="huidigstuk">Tom, Dick & Harry</p>
+        <p>
+          Tom en Linda willen samen een baby adopteren en de inspecteur van het
+          adoptiebureau, mevrouw Potter, komt zo meteen langs. Net tijdens de
+          voorbereiding op haar bezoek komen Dick en Harry, de twee broers van
+          Tom met een iets minder ontwikkeld moreel kompas, langs om hun "hulp"
+          aan te bieden. Met als gevolg dat binnen de kortste keren twee
+          illegale immigranten, een politieagent en een vuilzak met mysterieuze
+          inhoud ten tonele komen.
+        </p>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col-12 col-sm-2">
+              <label class="box" for="Aantal">Aantal</label>
+              <input
+                class="form-control"
+                type="number"
+                name="seats"
+                max="40"
+                min="1"
+              />
+            </div>
+            <div class="col-12 col-sm-4">
+              <label class="box" for="Datum">Dag</label>
+
+              <select name="Datum">
+                <option value="keuze"> -- Maak een keuze --</option>
+                <option value="Dag1"> vrijdag 2 februari </option>
+                <option value="Dag2"> zaterdag 3 februari </option>
+                <option value="Dag3"> zondag 4 februari </option>
+                <option value="Dag4"> vrijdag 9 februari </option>
+                <option value="Dag5"> zaterdag 10 februari </option>
+                <option value="Dag6"> zondag 11 februari </option>
+                <option value="Dag7"> zaterdag 16 februari </option>
+                <option value="Dag8"> zondag 17 februari </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button>Snel reserveren!</button>
+        <button>meer weten</button>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
