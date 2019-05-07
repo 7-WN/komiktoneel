@@ -11,9 +11,9 @@ kleur
 #3195A6 - blauw
 #DF222A - fel rood
 #F26638 - oranje
-
 */
 
+/*rechtstreekse elementen */
 * {
   font-size: 18px;
   font-family: "Roboto", Sans-Serif;
@@ -24,6 +24,12 @@ body{
 h1 {
   font-size: 5rem;
   font-family: "Playfair Display", Serif;
+}
+
+.container {
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 .huidigstuk {
@@ -41,10 +47,13 @@ h1 {
   margin-right: 4%;
   margin-bottom: 100px;
 }
+
+/* Navbar hoofdpagina */
 .navbar-nav {
   margin-left: auto;
   margin-right: 10px;
 }
+
 .navbar-dark {
   background-color: black !important;
 }
@@ -57,6 +66,7 @@ h1 {
   color: #f3f2e3 !important;
 }
 
+/* Hero-image hoofdpagina */
 .hero-image {
   height: 100vh;
   width: 100vw;
@@ -75,11 +85,16 @@ h1 {
   color: white;
 }
 
-#plaats {
-  margin-left: 30%;
-  margin-top: 2rem;
+.hero-text2 {
+  text-align: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
+/*buttons*/
 .button {
   border: none;
   outline: 0;
@@ -104,21 +119,19 @@ h1 {
   margin-top: 2rem;
 }
 
-.hero-text2 {
-  text-align: center;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+/*position button homepage*/
+#position {
+  margin-left: 30%;
+  margin-top: 2rem;
 }
 
+/*Gedeelte onder hero img */
 .reservatie {
   background-color: #f3f2e3;
   height: 100vh;
 }
 
-.box {
+.form-box {
   background-color: #3d060e;
   color: #f3f2e3;
   padding: 5px 10px;
@@ -138,14 +151,39 @@ h1 {
   top: 130vh;
 }
 
-.position {
+.form-pos {
   margin-left: 30%;
 }
 
-.container {
-  min-width: 100vw;
-  margin: 0;
-  padding: 0;
+.footer {
+  background-color: #3d060e;
+  color: #f3f2e3;
+  height: 90px;
+  margin-bottom: 0px;
+}
+
+.footer-nav {
+  display: inline-block;
+  position: absolute;
+  right: 50px;
+  max-height: 90px;
+}
+
+.footer-img {
+  margin: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 50px;
+  min-height: 50px;
+}
+
+.footer-txt {
+  display: inline-block;
+  margin: 20px 0px;
+}
+/*margin ul bij footer*/
+footer > nav > ul {
+  margin-bottom: 0px;
 }
 
 .navbar-toggler-icon {

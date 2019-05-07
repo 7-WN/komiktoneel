@@ -58,6 +58,7 @@
         </div>
       </nav>
     </header>
+
     <div class="container">
       <main>
         <section class="hero-image">
@@ -89,12 +90,12 @@
             mysterieuze inhoud ten tonele komen.
           </p>
 
-          <form class="form-inline position">
+          <form class="form-inline form-pos">
             <div class="row">
               <div class="form-group">
                 <div class="col-12 col-sm-4">
                   <div class="input-group-prepend">
-                    <label class="box" for="Aantal">Aantal</label>
+                    <label class="form-box" for="Aantal">Aantal</label>
                     <input
                       class="form-control formulier"
                       type="number"
@@ -106,9 +107,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-12 col-sm-12">
+                <div class="col-12">
                   <div class="input-group-prepend">
-                    <label class="box" for="Datum">Dag</label>
+                    <label class="form-box" for="Datum">Dag</label>
                     <select class="custom-select formulier" name="Datum">
                       <option value="keuze" disabled selected>
                         Kies een datum
@@ -128,12 +129,29 @@
             </div>
           </form>
 
-          <button id="plaats" class="button">Snel reserveren!</button>
+          <button id="position" class="button">Snel reserveren!</button>
           <button class="buttonreverse">meer weten</button>
         </section>
       </main>
+
+      <footer class="footer">
+        <img
+          class="footer-img"
+          src="./images/logo zwartwit.png"
+          alt="Logo Komiktoneel"
+        />
+        <nav class="footer-nav">
+          <ul>
+            <li class="footer-txt">
+              <a class="nav-item nav-link" href="./sponsors.html">Sponsors</a>
+            </li>
+            <li class="footer-txt">
+              <a class="nav-item nav-link" href="./login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </div>
-    <footer></footer>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
