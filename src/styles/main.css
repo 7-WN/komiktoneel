@@ -18,7 +18,9 @@ kleur
   font-size: 18px;
   font-family: "Roboto", Sans-Serif;
 }
-
+body{
+  background-color: #F3F2E3;
+}
 h1 {
   font-size: 5rem;
   font-family: "Playfair Display", Serif;
@@ -45,6 +47,10 @@ h1 {
 }
 .navbar-dark {
   background-color: black !important;
+}
+
+.navbar-red {
+  background-color: #5D0A17 !important;
 }
 
 .nav-link {
@@ -79,7 +85,7 @@ h1 {
   outline: 0;
   display: inline-block;
   padding: 10px 25px;
-  color: black;
+  color: #F3F2E3;
   background-color: #3195a6;
   text-align: center;
   cursor: pointer;
@@ -140,4 +146,22 @@ h1 {
   min-width: 100vw;
   margin: 0;
   padding: 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(243,242,227)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.form-control{
+  border: 2px solid #3d060e;
+  border-radius: 0;
+  color: black;
+  height: 37px;
+}
+
+label{
+  background-color: #3d060e;
+  color: #f3f2e3;
+  padding: 5px 10px;
+  margin: 0;
 }
