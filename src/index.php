@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Komiktoneel</title>
-
-    <!-- Stylesheets -->
-    <link
-      rel="stylesheet"
-      href="url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css)"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles/main.css" />
-
-    <!-- Google fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto"
-      rel="stylesheet"
-    />
-  </head>
+<?php include 'components/head.php' ?>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -91,10 +65,10 @@
           </p>
 
           <form class="form-inline form-pos" action="/action_page.php">
-            <div class="form-group">
+            <div id="aantal" class="form-group">
               <label class="form-box" for="Aantal">Aantal</label>
               <input
-                class="form-control"
+                class="form-control input-size"
                 type="number"
                 name="seats"
                 max="40"
@@ -103,10 +77,13 @@
               />
             </div>
 
-            <div class="form-group">
+            <div id="datum" class="form-group">
               <label class="form-box" for="Datum">Dag</label>
 
-              <select class="formulier custom-select" name="Datum">
+              <select
+                class="formulier custom-select form-control select-size"
+                name="Datum"
+              >
                 <option value="keuze" disabled selected>
                   Kies een datum
                 </option>
@@ -122,43 +99,9 @@
             </div>
           </form>
 
-          <button id="position" class="button">Snel reserveren!</button>
-          <button class="buttonreverse">meer weten</button>
+          <button class="button btn-poslinks">Snel reserveren!</button>
+          <button class="buttonreverse btn-posrechts">meer weten</button>
         </section>
       </main>
 
-      <footer class="footer">
-        <img
-          class="footer-img"
-          src="./images/logo zwartwit.png"
-          alt="Logo Komiktoneel"
-        />
-        <nav class="footer-nav">
-          <ul>
-            <li class="footer-txt">
-              <a class="nav-item nav-link" href="./sponsors.html">Sponsors</a>
-            </li>
-            <li class="footer-txt">
-              <a class="nav-item nav-link" href="./login.html">Login</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+<?php include 'components/foot.php' ?>
