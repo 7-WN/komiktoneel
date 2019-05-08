@@ -90,42 +90,35 @@
             mysterieuze inhoud ten tonele komen.
           </p>
 
-          <form class="form-inline form-pos">
-            <div class="row">
-              <div class="form-group">
-                <div class="col-12 col-sm-4">
-                  <div class="input-group-prepend">
-                    <label class="form-box" for="Aantal">Aantal</label>
-                    <input
-                      class="form-control formulier"
-                      type="number"
-                      name="seats"
-                      max="40"
-                      min="1"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-12">
-                  <div class="input-group-prepend">
-                    <label class="form-box" for="Datum">Dag</label>
-                    <select class="custom-select formulier" name="Datum">
-                      <option value="keuze" disabled selected>
-                        Kies een datum
-                      </option>
-                      <option value="Dag1"> vrijdag 2 februari </option>
-                      <option value="Dag2"> zaterdag 3 februari </option>
-                      <option value="Dag3"> zondag 4 februari </option>
-                      <option value="Dag4"> vrijdag 9 februari </option>
-                      <option value="Dag5"> zaterdag 10 februari </option>
-                      <option value="Dag6"> zondag 11 februari </option>
-                      <option value="Dag7"> zaterdag 16 februari </option>
-                      <option value="Dag8"> zondag 17 februari </option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+          <form class="form-inline form-pos" action="/action_page.php">
+            <div class="form-group">
+              <label class="form-box" for="Aantal">Aantal</label>
+              <input
+                class="form-control"
+                type="number"
+                name="seats"
+                max="40"
+                min="1"
+                placeholder="0"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-box" for="Datum">Dag</label>
+
+              <select class="formulier custom-select" name="Datum">
+                <option value="keuze" disabled selected>
+                  Kies een datum
+                </option>
+                <option value="Dag1"> vrijdag 2 februari </option>
+                <option value="Dag2"> zaterdag 3 februari </option>
+                <option value="Dag3"> zondag 4 februari </option>
+                <option value="Dag4"> vrijdag 9 februari </option>
+                <option value="Dag5"> zaterdag 10 februari </option>
+                <option value="Dag6"> zondag 11 februari </option>
+                <option value="Dag7"> zaterdag 16 februari </option>
+                <option value="Dag8"> zondag 17 februari </option>
+              </select>
             </div>
           </form>
 
