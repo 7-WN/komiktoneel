@@ -29,17 +29,5 @@
                 </div>
             </form>
         </main>
-    </div>
-    <footer class="footer">
-        <img class="footer-img" src="./images/logo zwartwit.png" alt="Logo Komiktoneel" />
-        <nav class="footer-nav">
-            <ul>
-                <li class="footer-txt">
-                    <a class="nav-item nav-link" href="./sponsors.html">Sponsors</a>
-                </li>
-                <li class="footer-txt">
-                    <a class="nav-item nav-link" href="./login.html">Login</a>
-                </li>
-            </ul>
-        </nav>
+
         <?php include 'components/foot.php' ?>
