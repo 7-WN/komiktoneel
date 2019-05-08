@@ -66,6 +66,11 @@ h1 {
   color: #f3f2e3 !important;
 }
 
+.nav-link:hover {
+  border-bottom: 1px solid #f3f2e3;
+}
+
+
 /* Hero-image hoofdpagina */
 .hero-image {
   height: 100vh;
@@ -157,7 +162,7 @@ h1 {
 
 /*footer*/
 .footer {
-  background-color: #3d060e;
+  background-color: #5D0A17;
   color: #f3f2e3;
   height: 90px;
   margin-bottom: 0px;
@@ -204,3 +209,4 @@ label{
   padding: 5px 10px;
   margin: 0;
 }
+
