@@ -5,10 +5,10 @@
   $pwd = "";
   $db = "komikdb";
 
-  $conn = new mysqli($host, $user, $pwd, $db);
+  $con = mysqli_connect($host, $user, $pwd, $db);
 
-  if($conn->connect_error){
-    die("Connection to database failed: " . $conn->connect_error);
+  if($con->connect_error){
+    die("Connection to database failed: " . $con->connect_error);
   }
 
-  echo "<script>console.log('Connection to database succeeded')</script>";
+  echo "<script>console.log('Database connection succesful')</script>";
