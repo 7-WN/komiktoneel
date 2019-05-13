@@ -5,7 +5,7 @@
   $statementStukken = "SELECT * from stukken";
   $resStukken = mysqli_query($con, $statementStukken);
 
-  $statementDagen = "SELECT * FROM stukken INNER JOIN dagen ON stukken.stuk_id = dagen.stuk_id";
+  $statementDagen = "SELECT * FROM dagen /*INNER JOIN dagen ON stukken.stuk_id = dagen.stuk_id*/";
   $resDagen = mysqli_query($con, $statementDagen);
 
 ?>
@@ -25,8 +25,8 @@
       <ul>
         <?php while($row2 = mysqli_fetch_assoc($resDagen)){
           if($row2['stuk_id'] === $row['stuk_id']){ ?>
-          <li><?= date('l j F om H', $row2['dag']) ?></li>
-        <?php }} ?>
+          <li><?= date("jS F, Y", strtotime($row2["dag"])) ?></li>
+        <?php } else { break; }} ?>
       </ul>
     </li>
   </ul>
