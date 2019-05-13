@@ -39,18 +39,25 @@
             </section>
 
             <section class="reservatie">
-                <img class="affiche" src="./images/Affiche TomDickHarry.png" alt="Affiche huidige toneel" />
-                <p class="huidigstuk">Tom, Dick & Harry</p>
-                <p class="tekst">
-                    Tom en Linda willen samen een baby adopteren en de inspecteur van
-                    het adoptiebureau, mevrouw Potter, komt zo meteen langs. Net tijdens
-                    de voorbereiding op haar bezoek komen Dick en Harry, de twee broers
-                    van Tom met een iets minder ontwikkeld moreel kompas, langs om hun
-                    "hulp" aan te bieden. Met als gevolg dat binnen de kortste keren
-                    twee illegale immigranten, een politieagent en een vuilzak met
-                    mysterieuze inhoud ten tonele komen.
-                </p>
+                <div class="row">
 
+                    <div class="col-12 col-sm-4">
+
+                        <img class="affiche" src="./images/Affiche TomDickHarry.png" alt="Affiche huidige toneel" />
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <p class="huidigstuk">Tom, Dick & Harry</p>
+                        <p class="samenvatting">
+                            Tom en Linda willen samen een baby adopteren en de inspecteur van
+                            het adoptiebureau, mevrouw Potter, komt zo meteen langs. Net tijdens
+                            de voorbereiding op haar bezoek komen Dick en Harry, de twee broers
+                            van Tom met een iets minder ontwikkeld moreel kompas, langs om hun
+                            "hulp" aan te bieden. Met als gevolg dat binnen de kortste keren
+                            twee illegale immigranten, een politieagent en een vuilzak met
+                            mysterieuze inhoud ten tonele komen.
+                        </p>
+                    </div>
+                </div>
 
                 <form class="form-inline form-pos" action="/action_page.php">
                     <div class="form-group margin">
