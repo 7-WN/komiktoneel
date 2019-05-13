@@ -32,6 +32,84 @@ h1 {
   padding: 0;
 }
 
+.row {
+  padding: 0px;
+  margin: 0px;
+}
+
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+  padding: 0px;
+}
+
 .huidigstuk {
   font-size: 2rem;
   font-family: "Playfair Display", Serif;
@@ -70,10 +148,9 @@ h1 {
   border-bottom: 1px solid #f3f2e3;
 }
 
-
 /* Hero-image hoofdpagina */
 .hero-image {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,59 +176,59 @@ h1 {
   color: white;
 }
 
-/*buttons*/
+/*buttons homepage*/
 .button {
   border: none;
   outline: 0;
-  display: inline-block;
   padding: 10px 25px;
   color: #f3f2e3;
   background-color: #3195a6;
   text-align: center;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .buttonreverse {
   border: 3px solid #3195a6;
   outline: 0;
-  position: absolute;
   padding: 7px 22px;
   color: black;
   background-color: #f3f2e3;
   text-align: center;
   cursor: pointer;
-  right: 4%;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
-/*position button homepage*/
-.btn-poslinks {
-  margin: 100px auto 50px 30%;
-}
+/*position buttons homepage*/
 
-.btn-posrechts {
-  margin-right: 4%;
-  margin: 100px 4% 50px auto;
-}
-/*Gedeelte onder hero img */
+/*Gedeelte onder hero img 
+Deel van het reservatieformuler*/
 .reservatie {
   background-color: #f3f2e3;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.form-box {
+.form-control {
+  border: 2px solid #3d060e;
+  border-radius: 0;
+  color: black;
+}
+
+label {
   background-color: #3d060e;
   color: #f3f2e3;
   padding: 5px 10px;
   margin: 0;
-  display: inline-block;
-  height: 50px;
+  height: calc(1.5em + 0.75rem + 2px);
 }
 
-​ .formulier {
-  border: 2px solid #3d060e !important;
-  border-radius: 0 !important;
-  color: black;
+.btn-pos {
+  margin: 4% 4% 4% 30%;
+}
+
+.btn-pos-txt {
+  text-align: right;
+  padding: 0px;
 }
 
 .affiche {
@@ -162,36 +239,17 @@ h1 {
 
 .form-pos {
   margin-left: 30%;
+  margin-right: 4%;
 }
 
-.input-size {
-  width: 80px !important;
-  height: 50px !important;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.select-size {
-  width: 400px !important;
-  height: 50px !important;
-}
-#datum {
-  position: absolute;
-  right: 4%;
-  left: auto;
-  min-width: 400px;
-}
-
-#aantal {
-  position: absolute;
-  left: 30%;
-  right: auto;
+.margin {
+  margin-left: 0px;
+  margin-right: auto;
 }
 
 /*footer*/
 .footer {
-  background-color: #5D0A17;
+  background-color: #5d0a17;
   color: #f3f2e3;
   height: 90px;
   margin-bottom: 0px;
@@ -223,18 +281,4 @@ footer > nav > ul {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(243,242,227)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.form-control {
-  border: 2px solid #3d060e;
-  border-radius: 0;
-  color: black;
-  height: 37px;
-}
-
-label {
-  background-color: #3d060e;
-  color: #f3f2e3;
-  padding: 5px 10px;
-  margin: 0;
 }
