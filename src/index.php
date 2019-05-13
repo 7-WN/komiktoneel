@@ -51,39 +51,44 @@
                     mysterieuze inhoud ten tonele komen.
                 </p>
 
-                <div class="row">
-                    <div class="col-6">
-                        <form class="form-inline form-pos" action="/action_page.php">
-                            <div id="aantal" class="form-group">
-                                <label class="form-box" for="Aantal">Aantal</label>
-                                <input class="form-control input-size" type="number" name="seats" max="40" min="1"
-                                    placeholder="0" />
-                            </div>
-                    </div>
-                    <div class="col-6">
-                        <div id="datum" class="form-group">
-                            <label class="form-box" for="Datum">Dag</label>
 
-                            <select class="formulier custom-select form-control select-size" name="Datum">
-                                <option value="keuze" disabled selected>
-                                    Kies een datum
-                                </option>
-                                <option value="Dag1"> vrijdag 2 februari </option>
-                                <option value="Dag2"> zaterdag 3 februari </option>
-                                <option value="Dag3"> zondag 4 februari </option>
-                                <option value="Dag4"> vrijdag 9 februari </option>
-                                <option value="Dag5"> zaterdag 10 februari </option>
-                                <option value="Dag6"> zondag 11 februari </option>
-                                <option value="Dag7"> zaterdag 16 februari </option>
-                                <option value="Dag8"> zondag 17 februari </option>
-                            </select>
-                        </div>
-                        </form>
+                <form class="form-inline form-pos" action="/action_page.php">
+                    <div class="form-group margin">
+                        <label for="Aantal">Aantal</label>
+                        <input class="form-control input-size" type="number" name="seats" max="40" min="1"
+                            placeholder="0" />
                     </div>
-                </div>
-                <button class="button btn-poslinks">Snel reserveren!</button>
-                <button class="buttonreverse btn-posrechts">meer weten</button>
+                    <div class="form-group">
+                        <label for="Datum">Dag</label>
+                        <select class="formulier custom-select form-control select-size" name="datum">
+                            <option value="keuze" disabled selected>
+                                Kies een datum
+                            </option>
+                            <option value="dag1"> vrijdag 2 februari </option>
+                            <option value="dag2"> zaterdag 3 februari </option>
+                            <option value="dag3"> zondag 4 februari </option>
+                            <option value="dag4"> vrijdag 9 februari </option>
+                            <option value="dag5"> zaterdag 10 februari </option>
+                            <option value="dag6"> zondag 11 februari </option>
+                            <option value="dag7"> zaterdag 16 februari </option>
+                            <option value="dag8"> zondag 17 februari </option>
+                        </select>
+                    </div>
+                </form>
+
+                <article class="row btn-pos">
+                    <div class="col-12 col-sm-6">
+                        <a href="./reserveren.php">
+                            <input type="" class="button" value="Snel reserveren!" />
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 btn-pos-txt">
+
+                        <button class="buttonreverse" class="col-12 col-sm-6">meer weten</button>
+                    </div>
+                </article>
+
             </section>
         </main>
-
-        <?php include 'components/foot.php' ?>
+    </div>
+    <?php include 'components/foot.php' ?>
