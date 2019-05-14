@@ -1,3 +1,14 @@
+<?php
+
+    include "php/dbconfig.php";
+    $statement = "SELECT * FROM stukken ORDER BY stuk_id DESC LIMIT 1";
+
+    $result = mysqli_query($con, $statement);
+
+    $stuk = mysqli_fetch_assoc($result);
+
+?>
+
 <?php include 'components/head.php' ?>
 
 <body>
@@ -33,7 +44,7 @@
                 </div>
                 <div class="hero-text2">
                     <p>Volgend stuk</p>
-                    <p span style="font-size:2rem;">Tom, Dick & Harry</p>
+                    <p span style="font-size:2rem;"><?= $stuk["titel"] ?></p>
                     <button class="button">Reserveer nu</button>
                 </div>
             </section>
@@ -46,15 +57,9 @@
                         <img class="affiche" src="./images/Affiche TomDickHarry.png" alt="Affiche huidige toneel" />
                     </div>
                     <div class="col-12 col-sm-8">
-                        <p class="huidigstuk">Tom, Dick & Harry</p>
+                        <p class="huidigstuk"><?= $stuk["titel"] ?></p>
                         <p class="samenvatting">
-                            Tom en Linda willen samen een baby adopteren en de inspecteur van
-                            het adoptiebureau, mevrouw Potter, komt zo meteen langs. Net tijdens
-                            de voorbereiding op haar bezoek komen Dick en Harry, de twee broers
-                            van Tom met een iets minder ontwikkeld moreel kompas, langs om hun
-                            "hulp" aan te bieden. Met als gevolg dat binnen de kortste keren
-                            twee illegale immigranten, een politieagent en een vuilzak met
-                            mysterieuze inhoud ten tonele komen.
+                            <?= $stuk["beschrijving"] ?>
                         </p>
                     </div>
                 </div>
