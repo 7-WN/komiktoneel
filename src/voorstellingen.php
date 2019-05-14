@@ -18,6 +18,7 @@
     <li>Beschrijving: <?= $row['beschrijving'] ?></li>
     <li>Regisseur: <?= $row['regisseur'] ?></li>
     <li>Schrijver: <?= $row['schrijver'] ?></li>
+    <li>Flyer: <?php echo '<img style="width: 350px; height: 200px; border: 2px solid black;" src="data:image/jpeg;base64,'. base64_encode( $row['flyer'] ) . '"/>' ?></li>
     <li><b>Dagen: </b>
       <ul>
         <?php 
