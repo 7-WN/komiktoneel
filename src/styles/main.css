@@ -110,22 +110,6 @@ h1 {
   padding: 0px;
 }
 
-.huidigstuk {
-  font-size: 2rem;
-  font-family: "Playfair Display", Serif;
-  margin-left: 30%;
-  margin-right: 4%;
-  padding-top: 100px;
-  color: #5d0a17;
-}
-
-.tekst {
-  text-align: justify;
-  margin-left: 30%;
-  margin-right: 4%;
-  margin-bottom: 100px;
-}
-
 /* Navbar hoofdpagina */
 .navbar-nav {
   margin-left: auto;
@@ -151,7 +135,8 @@ h1 {
 /* Hero-image hoofdpagina */
 .hero-image {
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -174,6 +159,20 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+/* Huidige stuk onder hero img*/
+.huidigstuk {
+  font-size: 2rem;
+  font-family: "Playfair Display", Serif;
+  padding-top: 100px;
+  color: #5d0a17;
+  margin: 20px 40px 0px;
+}
+
+.samenvatting {
+  text-align: justify;
+  margin: 20px 40px 100px;
 }
 
 /*buttons homepage*/
@@ -223,7 +222,7 @@ label {
 }
 
 .btn-pos {
-  margin: 4% 4% 4% 30%;
+  margin: 4% 40px 4% 40px;
 }
 
 .btn-pos-txt {
@@ -232,14 +231,14 @@ label {
 }
 
 .affiche {
-  position: absolute;
-  left: 30px;
-  top: 130vh;
+  float: left;
+  width: 70%;
+  margin: 100px 50px 0px;
 }
 
 .form-pos {
   margin-left: 30%;
-  margin-right: 4%;
+  margin-right: 40px;
 }
 
 .margin {
