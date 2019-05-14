@@ -1,12 +1,9 @@
 <?php
-
+  
   include 'php/dbconfig.php';
 
   $statementStukken = "SELECT * from stukken";
   $resStukken = mysqli_query($con, $statementStukken);
-
-  $statementDagen = "SELECT * FROM dagen /*INNER JOIN dagen ON stukken.stuk_id = dagen.stuk_id*/";
-  $resDagen = mysqli_query($con, $statementDagen);
 
 ?>
 
@@ -23,10 +20,12 @@
     <li>Schrijver: <?= $row['schrijver'] ?></li>
     <li><b>Dagen: </b>
       <ul>
-        <?php while($row2 = mysqli_fetch_assoc($resDagen)){
-          if($row2['stuk_id'] === $row['stuk_id']){ ?>
+        <?php 
+        $statementDagen = "select * from stukken inner join dagen on stukken.stuk_id = dagen.stuk_id where stukken.stuk_id = " . $row['stuk_id'];
+        $resDagen = mysqli_query($con, $statementDagen);
+        while($row2 = mysqli_fetch_assoc($resDagen)){ ?>
           <li><?= date("jS F, Y", strtotime($row2["dag"])) ?></li>
-        <?php } else { break; }} ?>
+        <?php } ?>
       </ul>
     </li>
   </ul>
