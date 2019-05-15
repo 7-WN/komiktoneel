@@ -54,7 +54,7 @@
 
                     <div class="col-12 col-sm-4">
 
-                        <img class="affiche" src="./images/Affiche TomDickHarry.png" alt="Affiche huidige toneel" />
+                        <img class="affiche" alt="Affiche huidig stuk" <?php echo 'src="data:image/jpeg;base64,'. base64_encode( $stuk['flyer'] ) . '"/>' ?>
                     </div>
                     <div class="col-12 col-sm-8">
                         <p class="huidigstuk"><?= $stuk["titel"] ?></p>
@@ -76,14 +76,11 @@
                             <option value="keuze" disabled selected>
                                 Kies een datum
                             </option>
-                            <option value="dag1"> vrijdag 2 februari </option>
-                            <option value="dag2"> zaterdag 3 februari </option>
-                            <option value="dag3"> zondag 4 februari </option>
-                            <option value="dag4"> vrijdag 9 februari </option>
-                            <option value="dag5"> zaterdag 10 februari </option>
-                            <option value="dag6"> zondag 11 februari </option>
-                            <option value="dag7"> zaterdag 16 februari </option>
-                            <option value="dag8"> zondag 17 februari </option>
+                            <?php $statementDagen = "SELECT * FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
+                            $resultDagen = mysqli_query($con, $statementDagen);
+                            while($row = mysqli_fetch_assoc($resultDagen)){ ?>
+                                <option value="<?= $row['dag_id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u</option>
+                            <?php } ?>
                         </select>
                     </div>
                 </form>
@@ -96,7 +93,7 @@
                     </div>
                     <div class="col-12 col-sm-6 btn-pos-txt">
 
-                        <button class="buttonreverse" class="col-12 col-sm-6">meer weten</button>
+                        <button class="buttonreverse" class="col-12 col-sm-6">Meer weten</button>
                     </div>
                 </article>
 
