@@ -126,10 +126,12 @@ h1 {
 
 .nav-link {
   color: #f3f2e3 !important;
+  padding-bottom: 1px;
 }
 
 .nav-link:hover {
   border-bottom: 1px solid #f3f2e3;
+  padding-bottom: 0px;
 }
 
 /* Hero-image hoofdpagina */
