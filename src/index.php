@@ -54,7 +54,7 @@
 
                     <div class="col-12 col-sm-4">
 
-                        <img class="affiche" src="./images/Affiche TomDickHarry.png" alt="Affiche huidige toneel" />
+                        <img class="affiche" alt="Affiche huidig stuk" <?php echo 'src="data:image/jpeg;base64,'. base64_encode( $stuk['flyer'] ) . '"/>' ?>
                     </div>
                     <div class="col-12 col-sm-8">
                         <p class="huidigstuk"><?= $stuk["titel"] ?></p>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="col-12 col-sm-6 btn-pos-txt">
 
-                        <button class="buttonreverse" class="col-12 col-sm-6">meer weten</button>
+                        <button class="buttonreverse" class="col-12 col-sm-6">Meer weten</button>
                     </div>
                 </article>
 
