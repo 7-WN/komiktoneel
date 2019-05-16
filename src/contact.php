@@ -1,4 +1,4 @@
-<?php include 'components/head.php' ?>
+<?php $title = "Contact"; include 'components/head.php' ?>
 
 
 <body>

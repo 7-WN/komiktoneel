@@ -7,7 +7,7 @@
 
 ?>
 
-<?php include 'components/head.php' ?>
+<?php $title = "Sponsors"; include 'components/head.php' ?>
 
 <body>
     <?php include 'components/header.php' ?>

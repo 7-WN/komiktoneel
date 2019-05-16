@@ -8,7 +8,7 @@
 
 ?>
 
-<?php include 'components/head.php' ?>
+<?php $title = "Komik Toneel"; include 'components/head.php' ?>
 
 <body>
     <header>

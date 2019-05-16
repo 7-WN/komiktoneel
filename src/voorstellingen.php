@@ -7,7 +7,7 @@
 
 ?>
 
-<?php include 'components/head.php' ?>
+<?php $title = "Voorstellingen"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
 
 <h1>Voorstellingen</h1>
