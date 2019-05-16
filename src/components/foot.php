@@ -1,5 +1,5 @@
 <footer class="footer">
-    <img class="footer-img" src="./images/logo zwartwit.png" alt="Logo Komiktoneel" />
+    <img class="footer-img" src="./images/logo-zwartwit.png" alt="Logo Komiktoneel" />
     <nav class="footer-nav">
         <ul>
             <li class="footer-txt">

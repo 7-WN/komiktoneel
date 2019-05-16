@@ -1,7 +1,7 @@
 <?php
 
     include "php/dbconfig.php";
-    $statement = "SELECT * FROM stukken ORDER BY stuk_id DESC LIMIT 1";
+    $statement = "SELECT * FROM stukken ORDER BY id DESC LIMIT 1";
 
     $result = mysqli_query($con, $statement);
     $stuk = mysqli_fetch_assoc($result);
@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="./index.php">
-                <img src="./images/logo zwartwit.png" alt="Logo komiktoneel" />
+                <img src="./images/logo-zwartwit.png" alt="Logo komiktoneel" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,8 +53,9 @@
 
                     <div class="col-12 col-sm-4">
 
-                        <img class="affiche" alt="Affiche huidig stuk"
-                            <?php echo 'src="data:image/jpeg;base64,'. base64_encode( $stuk['flyer'] ) . '"/>' ?> </div>
+                        <img class="affiche" alt="Affiche huidig stuk" src='<?= $stuk["flyer_path"] ?>' />
+                    
+                    </div>
                             <div class="col-12 col-sm-8">
                         <p class="huidigstuk"><?= $stuk["titel"] ?></p>
                         <p class="samenvatting">
@@ -75,10 +76,10 @@
                             <option value="keuze" disabled selected>
                                 Kies een datum
                             </option>
-                            <?php $statementDagen = "SELECT * FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
+                            <?php $statementDagen = "SELECT * FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.id WHERE stukken.id = " . $stuk['id'];
                             $resultDagen = mysqli_query($con, $statementDagen);
                             while($row = mysqli_fetch_assoc($resultDagen)){ ?>
-                            <option value="<?= $row['dag_id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u
+                            <option value="<?= $row['id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u
                             </option>
                             <?php } ?>
                         </select>
