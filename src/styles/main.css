@@ -143,6 +143,10 @@ Deel van het reservatieformuler*/
   color: black;
 }
 
+.btn-position {
+  margin: 40px;
+}
+
 label {
   background-color: #3d060e;
   color: #f3f2e3;
@@ -151,9 +155,6 @@ label {
   height: calc(1.5em + 0.75rem + 2px);
 }
 
-.btn-pos {
-  margin: 4% 40px 4% 30%;
-}
 .btn-pos-txt {
   text-align: right;
   padding: 0px;
@@ -163,16 +164,6 @@ label {
   float: left;
   width: 70%;
   margin: 100px 50px 0px;
-}
-
-.form-pos {
-  margin-left: 30%;
-  margin-right: 40px;
-}
-
-.margin {
-  margin-left: 0px;
-  margin-right: auto;
 }
 
 /*footer*/
@@ -213,7 +204,7 @@ footer > nav > ul {
 
 /*Contact page*/
 
-.contactpage{
+.contactpage {
   padding-left: 20%;
   padding-right: 20%;
 }

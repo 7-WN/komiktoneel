@@ -54,9 +54,9 @@
                     <div class="col-12 col-sm-4">
 
                         <img class="affiche" alt="Affiche huidig stuk" src='<?= $stuk["flyer_path"] ?>' />
-                    
+
                     </div>
-                            <div class="col-12 col-sm-8">
+                    <div class="col-12 col-sm-8">
                         <p class="huidigstuk"><?= $stuk["titel"] ?></p>
                         <p class="samenvatting">
                             <?= $stuk["beschrijving"] ?>
@@ -64,37 +64,39 @@
                     </div>
                 </div>
 
-                <form class="form-inline form-pos" action="reserveren.php">
+                <div class="row">
+                    <form class="form-inline form-pos col-sm-8 offset-sm-4" action="reserveren.php">
 
-                    <div class="form-group margin">
-                        <label for="Aantal">Aantal</label>
-                        <input class="form-control input-size" type="number" name="seats" max="40" min="1"
-                            placeholder="0" />
-                    </div>
-                    <div class="form-group">
-                        <label for="Datum">Dag</label>
-                        <select class="formulier custom-select form-control select-size" name="datum">
-                            <option value="keuze" disabled selected>
-                                Kies een datum
-                            </option>
-                            <?php $statementDagen = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
+                        <div class="form-group btn-position">
+                            <label for="Aantal">Aantal</label>
+                            <input class="form-control input-size" type="number" name="seats" max="40" min="1"
+                                placeholder="0" />
+                        </div>
+                        <div class="form-group btn-position">
+                            <label for="Datum">Dag</label>
+                            <select class="formulier custom-select form-control select-size" name="datum">
+                                <option value="keuze" disabled selected>
+                                    Kies een datum
+                                </option>
+                                <?php $statementDagen = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
                             $resultDagen = mysqli_query($con, $statementDagen);
                             while($row = mysqli_fetch_assoc($resultDagen)){ ?>
-                            <option value="<?= $row['dag_id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u
-                            </option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                
+                                <option value="<?= $row['dag_id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                </div>
 
-                <article class="row btn-pos">
+                <div class="row">
+
+                    <article class="offset-sm-4 col-sm-8">
                         <a href="./reserveren.php">
-                            <input type="submit" class="button" value="Snel reserveren!" />
+                            <input type="submit" class="button btn-position" value="Snel reserveren!" />
                         </a>
-
-                        <button class="buttonreverse" class="col-12 col-sm-6">Meer weten</button>
-                </article>
-
+                        <button class="buttonreverse btn-position">Meer weten</button>
+                    </article>
+                </div>
                 </form>
 
             </section>
