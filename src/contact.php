@@ -4,7 +4,7 @@
 <body>
     <?php include 'components/header.php' ?>
 
-    <div class="container">
+    <div class="container contactpage">
         <main>
             <h1>Contact</h1>
             <p>Een probleem met uw reservatie? Een vraag in verband met de website? Kan u het gewoon niet weerstaan om de acteurs een complimentje te geven? Wilt u meehelpen achter de schermen of schuilt er een acteur in u? Contacteer ons via dit formulier of onderstaande gegevens. </p>

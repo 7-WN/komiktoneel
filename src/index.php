@@ -1,7 +1,7 @@
 <?php
 
     include "php/dbconfig.php";
-    $statement = "SELECT * FROM stukken ORDER BY id DESC LIMIT 1";
+    $statement = "SELECT * FROM stukken ORDER BY stuk_id DESC LIMIT 1";
 
     $result = mysqli_query($con, $statement);
     $stuk = mysqli_fetch_assoc($result);
@@ -64,7 +64,8 @@
                     </div>
                 </div>
 
-                <form class="form-inline form-pos" action="/action_page.php">
+                <form class="form-inline form-pos" action="reserveren.php">
+
                     <div class="form-group margin">
                         <label for="Aantal">Aantal</label>
                         <input class="form-control input-size" type="number" name="seats" max="40" min="1"
@@ -76,27 +77,25 @@
                             <option value="keuze" disabled selected>
                                 Kies een datum
                             </option>
-                            <?php $statementDagen = "SELECT * FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.id WHERE stukken.id = " . $stuk['id'];
+                            <?php $statementDagen = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
                             $resultDagen = mysqli_query($con, $statementDagen);
                             while($row = mysqli_fetch_assoc($resultDagen)){ ?>
-                            <option value="<?= $row['id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u
+                            <option value="<?= $row['dag_id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u
                             </option>
                             <?php } ?>
                         </select>
                     </div>
-                </form>
+                
 
                 <article class="row btn-pos">
-                    <div class="col-12 col-sm-6">
                         <a href="./reserveren.php">
-                            <input type="" class="button" value="Snel reserveren!" />
+                            <input type="submit" class="button" value="Snel reserveren!" />
                         </a>
-                    </div>
-                    <div class="col-12 col-sm-6 btn-pos-txt">
 
                         <button class="buttonreverse" class="col-12 col-sm-6">Meer weten</button>
-                    </div>
                 </article>
+
+                </form>
 
             </section>
         </main>

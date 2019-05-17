@@ -22,7 +22,7 @@
     <li><b>Dagen: </b>
       <ul>
         <?php 
-        $statementDagen = "select * from stukken inner join dagen on stukken.id = dagen.stuk_id where stukken.id = " . $row['id'];
+        $statementDagen = "SELECT * FROM stukken INNER JOIN dagen ON stukken.stuk_id = dagen.stuk_id WHERE stukken.stuk_id = " . $row['stuk_id'];
         $resDagen = mysqli_query($con, $statementDagen);
         while($row2 = mysqli_fetch_assoc($resDagen)){ ?>
           <li><?= date("jS F, Y", strtotime($row2["dag"])) ?></li>
