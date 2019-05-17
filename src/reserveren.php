@@ -2,7 +2,7 @@
 
   include "php/dbconfig.php";
 
-  if(isset($_GET['submit'])){
+  if(isset($_GET['datum']) && isset($_GET['aantal'])){
     $dagKeuze = $_GET['datum'];
     $aantalKeuze = $_GET['aantal'];
   } else {
@@ -14,13 +14,13 @@
 
 <?php $title = "Reserveren"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
-<div class="container my-3">
-<div class="alert alert-primary">
+<div class="container">
+
   <?php if($dagKeuze && $aantalKeuze){ ?>
+    <div class="alert alert-primary">
     U gaat voor <b><?= $aantalKeuze ?></b> reserveren op <b><?= $dagKeuze ?></b>
-  <?php } else { ?>
-    Geen waarden gekozen
+    </div>
   <?php } ?>
-  </div>
+  
 </div>
 <?php include 'components/foot.php' ?>

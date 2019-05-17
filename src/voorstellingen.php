@@ -9,7 +9,7 @@
 
 <?php $title = "Voorstellingen"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
-
+<div class="container">
 <h1>Voorstellingen</h1>
 <?php if(mysqli_num_rows($resStukken) > 0){
   while($row = mysqli_fetch_assoc($resStukken)){ ?>
@@ -31,5 +31,5 @@
     </li>
   </ul>
   <?php }} ?>
-
+</div>
 <?php include 'components/foot.php' ?>
