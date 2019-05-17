@@ -68,7 +68,7 @@
 
                     <div class="form-group margin">
                         <label for="Aantal">Aantal</label>
-                        <input class="form-control input-size" type="number" name="seats" max="40" min="1"
+                        <input class="form-control input-size" type="number" name="aantal" max="40" min="1"
                             placeholder="0" />
                     </div>
                     <div class="form-group">
