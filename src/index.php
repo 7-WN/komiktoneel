@@ -9,8 +9,6 @@
 ?>
 
 <?php $title = "Komik Toneel"; include 'components/head.php' ?>
-
-<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="./index.php">
@@ -34,7 +32,6 @@
         </nav>
     </header>
 
-    <div class="container">
         <main>
             <section class="hero-image">
                 <img class="hero-image" src="./images/Hero.jpg" alt="Foto" />
@@ -48,6 +45,7 @@
                 </div>
             </section>
 
+        <div class="container">
             <section class="reservatie">
                 <div class="row">
 
@@ -100,4 +98,4 @@
             </section>
         </main>
     </div>
-    <?php include 'components/foot.php' ?>
+<?php include 'components/foot.php' ?>
