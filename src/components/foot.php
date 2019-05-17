@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer mt-5">
     <img class="footer-img" src="./images/logo-zwartwit.png" alt="Logo Komiktoneel" />
     <nav class="footer-nav">
         <ul>

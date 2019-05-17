@@ -27,6 +27,7 @@ h1 {
 }
 
 .container {
+  margin-top: 50px;
   max-width: 80vw;
   /*
   max-width: 100vw;
@@ -167,6 +168,10 @@ label {
   float: left;
   width: 70%;
   margin: 100px 50px 0px;
+}
+
+.sponsor-card {
+  padding: 0;
 }
 
 /*footer*/
