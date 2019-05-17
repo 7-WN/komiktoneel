@@ -64,7 +64,8 @@
                     </div>
                 </div>
 
-                <form class="form-inline form-pos" action="/action_page.php">
+                <form class="form-inline form-pos" action="reserveren.php">
+
                     <div class="form-group margin">
                         <label for="Aantal">Aantal</label>
                         <input class="form-control input-size" type="number" name="seats" max="40" min="1"
@@ -84,19 +85,17 @@
                             <?php } ?>
                         </select>
                     </div>
-                </form>
+                
 
                 <article class="row btn-pos">
-                    <div class="col-12 col-sm-6">
                         <a href="./reserveren.php">
-                            <input type="" class="button" value="Snel reserveren!" />
+                            <input type="submit" class="button" value="Snel reserveren!" />
                         </a>
-                    </div>
-                    <div class="col-12 col-sm-6 btn-pos-txt">
 
                         <button class="buttonreverse" class="col-12 col-sm-6">Meer weten</button>
-                    </div>
                 </article>
+
+                </form>
 
             </section>
         </main>
