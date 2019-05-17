@@ -224,9 +224,8 @@ label {
 }
 
 .btn-pos {
-  margin: 4% 40px 4% 40px;
+  margin: 4% 40px 4% 30%;
 }
-
 .btn-pos-txt {
   text-align: right;
   padding: 0px;

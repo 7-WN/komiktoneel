@@ -4,7 +4,6 @@
     $statement = "SELECT * FROM stukken ORDER BY stuk_id DESC LIMIT 1";
 
     $result = mysqli_query($con, $statement);
-
     $stuk = mysqli_fetch_assoc($result);
 
 ?>
@@ -54,9 +53,9 @@
 
                     <div class="col-12 col-sm-4">
 
-                        <img class="affiche" alt="Affiche huidig stuk" <?php echo 'src="data:image/jpeg;base64,'. base64_encode( $stuk['flyer'] ) . '"/>' ?>
-                    </div>
-                    <div class="col-12 col-sm-8">
+                        <img class="affiche" alt="Affiche huidig stuk"
+                            <?php echo 'src="data:image/jpeg;base64,'. base64_encode( $stuk['flyer'] ) . '"/>' ?> </div>
+                            <div class="col-12 col-sm-8">
                         <p class="huidigstuk"><?= $stuk["titel"] ?></p>
                         <p class="samenvatting">
                             <?= $stuk["beschrijving"] ?>
@@ -79,7 +78,8 @@
                             <?php $statementDagen = "SELECT * FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
                             $resultDagen = mysqli_query($con, $statementDagen);
                             while($row = mysqli_fetch_assoc($resultDagen)){ ?>
-                                <option value="<?= $row['dag_id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u</option>
+                            <option value="<?= $row['dag_id'] ?>"><?= date("jS F, G:i", strtotime($row["dag"])) ?>u
+                            </option>
                             <?php } ?>
                         </select>
                     </div>
