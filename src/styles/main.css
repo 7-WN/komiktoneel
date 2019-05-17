@@ -25,7 +25,13 @@ h1 {
   font-size: 5rem;
   font-family: "Playfair Display", Serif;
 }
-
+a,
+a:link,
+a:active,
+a:hover {
+  color: #181717 !important;
+  text-decoration: none;
+}
 .container {
   max-width: 100vw;
   min-width: 100vw;

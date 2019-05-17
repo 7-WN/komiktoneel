@@ -7,7 +7,9 @@
     <div class="container contactpage">
         <main>
             <h1>Contact</h1>
-            <p>Een probleem met uw reservatie? Een vraag in verband met de website? Kan u het gewoon niet weerstaan om de acteurs een complimentje te geven? Wilt u meehelpen achter de schermen of schuilt er een acteur in u? Contacteer ons via dit formulier of onderstaande gegevens. </p>
+            <p>Een probleem met uw reservatie? Een vraag in verband met de website? Kan u het gewoon niet weerstaan om
+                de acteurs een complimentje te geven? Wilt u meehelpen achter de schermen of schuilt er een acteur in u?
+                Contacteer ons via dit formulier of onderstaande gegevens. </p>
             <form>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Voornaam</label>
@@ -59,20 +61,34 @@
 
             <div class="row">
                 <article class="col">
-                <h3>De zaal bereiken</h3>
-                    <div style="width: 700px;position: relative;"><iframe width="700" height="440" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Venusstraat%2010%202520%20Oelegem+(Komiktoneel)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="http://www.googlemapsgenerator.com/zh/"></a> & <a href="https://kpnherladen.be/"></a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+                    <h3>De zaal bereiken</h3>
+                    <div style="width: 700px;position: relative;"><iframe width="700" height="440"
+                            src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Venusstraat%2010%202520%20Oelegem+(Komiktoneel)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <div
+                            style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+                            <small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a
+                                    href="http://www.googlemapsgenerator.com/zh/"></a> & <a
+                                    href="https://kpnherladen.be/"></a></small></div>
+                        <style>
+                        #gmap_canvas img {
+                            max-width: none !important;
+                            background: none !important
+                        }
+                        </style>
+                    </div><br />
                 </article>
                 <article class="col">
                     <p>Dit jaar spelen we weer in de Parochiezaal van Oelegem:</p>
                     <p>Venusstraat 10 2520 Oelegem</p>
                     <p>Er zijn 60 parkeerplaatsen beschikbaar.
-                    Er is een fietsenstalling aanwezig.
-                    De zaal is rolstoeltoegankelijk, gelieve ons te contacteren indien u met een rolstoel komt.
+                        Er is een fietsenstalling aanwezig.
+                        De zaal is rolstoeltoegankelijk, gelieve ons te contacteren indien u met een rolstoel komt.
                     </p>
                 </article>
             </div>
-            
-        </main>
-        </div>
 
-        <?php include 'components/foot.php' ?>
+        </main>
+    </div>
+
+    <?php include 'components/foot.php' ?>
