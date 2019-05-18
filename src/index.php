@@ -39,8 +39,8 @@
         </div>
         <div class="hero-text2">
             <p>Volgend stuk</p>
-            <p span style="font-size:2rem;"><?= $stuk["titel"] ?></p>
-            <button class="button"><a href="#reservatie"> Reserveer nu</a></button>
+            <p class="hero-stuk"><?= $stuk["titel"] ?></p>
+            <button class="button">Reserveer nu</button>
         </div>
     </section>
 

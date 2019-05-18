@@ -48,6 +48,10 @@ h1 {
   margin-right: 10px;
 }
 
+.navbar-brand {
+  height: 100px;
+}
+
 .navbar-dark {
   background-color: black !important;
 }
@@ -68,13 +72,37 @@ h1 {
 
 /* Hero-image hoofdpagina */
 .hero-image {
-  min-height: 100vh;
-  max-width: 100vw;
-  min-width: 100vw;
+  min-height: calc(100% - 100px);
+  max-height: calc(100vh - 100px);
+  width: 100vw;
+  max-width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+@media screen and (max-width: 1366px) {
+  .hero-image > .hero-text > h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-image > .hero-text2 {
+    padding-bottom: 10px;
+  }
+
+  .hero-image > .hero-text2 > p {
+    margin-bottom: 10px;
+  }
+
+  .hero-stuk {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-image > .hero-text2 > button {
+    margin-top: 0;
+  }
 }
 
 .hero-text {
@@ -93,6 +121,10 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.hero-stuk {
+  font-size: 2rem;
 }
 
 /* Huidige stuk onder hero img*/
