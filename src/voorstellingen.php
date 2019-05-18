@@ -33,3 +33,19 @@
   <?php }} ?>
 </div>
 <?php include 'components/foot.php' ?>
+
+<!-- 
+
+  werking:
+  Toon alle voorstellingen
+  Als stuk_id even is, genereer eerst flyer (col-4), dan tijdlijn (col-2), dan tekst (col-4)
+  Oneven = andersom
+
+  Middenstuk is steeds een lijn op volledige hoogte
+  Verbindt zich dus met de lijn erboven en eronder
+  Kader met het jaartal in het verticale midden
+
+  Lagere resoluties:
+  Afbeelding (en tekst?) verstopping zich: alleen titel (en knop)
+
+-->
