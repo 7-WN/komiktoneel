@@ -202,6 +202,39 @@ label {
   margin: 100px 50px 0px;
 }
 
+/* VOORSTELLINGEN */
+.stuk-row {
+  height: 400px;
+}
+
+.stuk-tekst .links {
+  text-align: right;
+}
+
+.stuk-titel {
+  color: #5d0a17;
+}
+
+.stuk-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10; /* number of lines to show */
+  line-height: 1; /* fallback */
+  max-height: 1 * 10; /* fallback */
+}
+
+.stuk-midden {
+  text-align: center;
+}
+
+.stuk-flyer {
+  max-height: 350px;
+  width: 100%;
+}
+
+/* SPONSORS */
 .sponsor-card {
   padding: 0;
 }
