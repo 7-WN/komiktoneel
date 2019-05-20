@@ -214,6 +214,11 @@ label {
   width: 70%;
 }
 
+.over-bestuurfoto {
+  max-width: 150px;
+  max-height: 200px;
+}
+
 /* VOORSTELLINGEN */
 .stuk-row {
   height: 400px;

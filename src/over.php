@@ -1,9 +1,40 @@
+<?php
+
+  include "php/dbconfig.php";
+
+  $bestuurStatement = "SELECT naam, functie, tekst, image_path FROM users WHERE bestuur=1";
+  $bestuurResult = mysqli_query($con, $bestuurStatement);
+
+  $acteursStatement = "SELECT naam, image_path FROM users WHERE NOT level='onactief'";
+  $acteursResult = mysqli_query($con, $acteursStatement);
+
+?>
+
 <?php $title = "Over Komik"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
 <div class="container">
   <img src="http://placehold.it/1000x300" alt="Groepsfoto Komik toneel" class="img-fluid over-groepsfoto">
   <h1 class="my-5">Over Komik Toneel</h1>
   <p>Welkom bij Komik Toneel, een amateur toneelgezelschap voor en door mensen die graag lachen.</p>
+  <h2 class="mt-5">Het bestuur</h2>
+  <?php while($row = mysqli_fetch_assoc($bestuurResult)){ ?>
+    <div class="row my-5">
+        <div class="col-md-2">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0 over-bestuurfoto" src="<?= $row['image_path'] ?>" alt="">
+          </a>
+        </div>
+        <div class="col-md-10">
+          <h3><?= $row['naam'] ?></h3>
+          <span class="text-muted font-italic"><?= $row['functie'] ?></span>
+          <p><?= $row['tekst'] ?></p>
+        </div>
+      </div>
+  <?php } ?>
+  <h2 class="mt-5">Onze mensen</h2>
+  <?php while($row = mysqli_fetch_assoc($acteursResult)){ ?>
+    <img src="<?= $row['image_path'] ?>" alt="Foto acteur" class="col-lg-2 col-md-3 col-sm-4 col-xs-6 my-5">
+  <?php } ?>
   <h2 class="mt-5">Geschiedenis</h2>
   <p>Komik Toneel is ontstaan in het volleybal. Een aantal jeugdtrainers zochten een extra
     activiteit, en kwamen op het idee om een toneelstuk op te voeren. Na het zoeken van
@@ -35,6 +66,5 @@
     Wij danken u alvast om de tijd te nemen onze site te bekijken en hopen u te mogen
     verwelkomen op één van onze voorstellingen.
   </p>
-  <h2 class="mt-5">Het bestuur</h2>
 </div>
 <?php include 'components/foot.php' ?>
