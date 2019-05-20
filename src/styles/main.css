@@ -285,3 +285,11 @@ footer > nav > ul {
   padding-left: 20%;
   padding-right: 20%;
 }
+
+.contactpage h4,.contactpage h3{
+  font-weight: 600;
+}
+
+.verzendknop{
+  margin-left: 15px;
+}

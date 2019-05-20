@@ -7,44 +7,44 @@
             acteurs een complimentje te geven? Wilt u meehelpen achter de schermen of schuilt er een acteur in u?
             Contacteer ons via dit formulier of onderstaande gegevens. </p>
         <form action="php/mail.php">
-            <div class="form-group col-md-6">
+            <div class="form-group col-12">
                 <label for="naam">Uw naam</label>
                 <input type="text" class="form-control" name="naam" placeholder="Hoe kunnen we u aanspreken?" />
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-12">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" name="email" placeholder="Hoe kunnen we u beantwoorden?" />
             </div>
 
-            <div class="form-group col-md-6">
+            <div class="form-group col-12">
                 <label for="boodschap">Boodschap</label>
                 <textarea class="form-control" name="boodschap" cols="100" rows="5"
                     placeholder="Hoe kunnen we u helpen?"></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group verzendknop">
                 <button type="submit" class="button">Verzenden</button>
             </div>
         </form>
 
         <div class="row my-5">
-            <article class="col">
-                <h3>Komik Toneel VZW</h3>
+            <article class="col-12 col-xl-3 info">
+                <h4>Komik Toneel VZW</h4>
                 <p>komik@telenet.be</p>
                 <p>Emblemseweg 85</p>
                 <p>2520 Emblem</p>
                 <p>0820233483</p>
             </article>
-            <article class="col">
+            <article class="col-12 col-xl-3 info">
                 <h4>Voorzitter</h4>
                 <p>Jeroen Beckers</p>
                 <p>+32 (0)497 55 09 23</p>
             </article>
-            <article clas="col">
+            <article class="col-12 col-xl-3 info">
                 <h4>Reservaties</h4>
                 <p>Renilde Op de Beeck</p>
                 <p>+32 (0)497 49 63 96</p>
             </article>
-            <article class="col">
+            <article class="col-12 col-xl-3 info">
                 <h4>Website</h4>
                 <p>Jesse Op de Beeck</p>
                 <p>+32 (0)471 39 15 88</p>
