@@ -10,37 +10,36 @@
     $resDagen = mysqli_query($con, $statementDagen);
     while($row2 = mysqli_fetch_assoc($resDagen)) {
       <li><?= date("jS F, Y", strtotime($row2["dag"])) ?></li>
-    } 
-  */
+}
+*/
 ?>
 
 <?php $title = "Voorstellingen"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
 <div class="container">
     <?php while($row = mysqli_fetch_assoc($resStukken)){ ?>
-      <section class="row stuk-row">
-        <div class="col-1"></div>
-        <article class="col-4 <?php echo($row['stuk_id']%2 ? 'stuk-tekst links' : 'stuk-flyer links') ?>">
-          <?php if($row['stuk_id']%2) { ?>
+    <section class="row stuk-row">
+        <article class="col-4 offset-1 <?php echo($row['stuk_id']%2 ? 'stuk-tekst links' : 'stuk-flyer links') ?>">
+            <?php if($row['stuk_id']%2) { ?>
             <h2 class="stuk-titel links"><?= $row['titel'] ?></h2>
             <p class="stuk-desc links"><?= $row['beschrijving'] ?></p>
             <button href="javascript:void(0)" class="btn btn-primary btn-sm">Meer lezen</button>
-          <?php } else { ?>
+            <?php } else { ?>
             <img class="stuk-flyer" src="<?= $row['flyer_path'] ?>" />
-          <?php } ?>
+            <?php } ?>
         </article>
         <div class="col-2 stuk-midden"></div>
         <article class="col-4 <?php echo($row['stuk_id']%2 ? 'stuk-tekst rechts' : 'stuk-flyer rechts') ?>">
-        <?php if($row['stuk_id']%2) { ?>
+            <?php if($row['stuk_id']%2) { ?>
             <img class="stuk-flyer" src="<?= $row['flyer_path'] ?>" />
-          <?php } else { ?>
+            <?php } else { ?>
             <h2 class="stuk-titel rechts"><?= $row['titel'] ?></h2>
             <p class="stuk-desc rechts"><?= $row['beschrijving'] ?></p>
             <button href="javascript:void(0)" class="btn btn-primary btn-sm">Meer lezen</button>
-          <?php } ?>
+            <?php } ?>
         </article>
         <div class="col-1"></div>
-      </section>
+    </section>
     <?php } ?>
 </div>
 <?php include 'components/foot.php' ?>
