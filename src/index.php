@@ -48,12 +48,12 @@
         <section class="reservatie">
             <div class="row">
 
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-md-4">
 
                     <img class="affiche" alt="Affiche huidig stuk" src='<?= $stuk["flyer_path"] ?>' />
 
                 </div>
-                <div class="col-12 col-sm-8">
+                <div class="col-12 col-md-8">
                     <p class="huidigstuk"><?= $stuk["titel"] ?></p>
                     <p class="samenvatting">
                         <?= $stuk["beschrijving"] ?>
@@ -62,40 +62,43 @@
             </div>
 
             <div class="row">
-                <form class="form-inline col-sm-8 offset-sm-4" action="reserveren.php" id="reservatie">
-
-                    <div class="form-group btn-position">
-                        <label for="Aantal">Aantal</label>
+                <article class="offset-4 col-lg-4" id="artikelaantal">
+                    <form class="form-inline" action="reserveren.php" id="reservatie">
+                        <label for="Aantal" class="buttonleft" id="labelres">Aantal</label>
                         <input class="form-control input-size" type="number" name="seats" max="40" min="1"
                             placeholder="0" />
-                    </div>
-                    <span style="margin-left:45px">
-                        <div class="form-group btn-position">
-                            <label for="Datum">Dag</label>
-                            <select class="formulier custom-select form-control select-size" name="datum">
-                                <option value="keuze" disabled selected>
-                                    Kies een datum
-                                </option>
-                                <?php $statementDagen = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
+                </article>
+                <article class="col-lg-4">
+                    <div class="form-inline paddingleft" id="btndag">
+
+                        <label for="Datum">Dag</label>
+                        <select class="formulier custom-select form-control select-size" name="datum">
+                            <option value="keuze" disabled selected>
+                                Kies een datum
+                            </option>
+                            <?php $statementDagen = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id = " . $stuk['stuk_id'];
                             $resultDagen = mysqli_query($con, $statementDagen);
                             while($row = mysqli_fetch_assoc($resultDagen)){ ?>
-                                <option value="<?= $row['dag_id'] ?>">
-                                    <?= date("jS F, G:i", strtotime($row["dag"])) ?>u
-                                </option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </span>
+                            <option value="<?= $row['dag_id'] ?>">
+                                <?= date("jS F, G:i", strtotime($row["dag"])) ?>u
+                            </option>
+                            <?php } ?>
+                        </select>
+                    </div>
             </div>
+            </article>
 
             <div class="row">
-                <article class="offset-sm-4 col-sm-3">
-                    <button type="submit" class="button btn-position" value="Snel reserveren!" /><a
-                        href="./reserveren.php"> Snel reserveren </a></button>
+                <article class="offset-4 col-lg-4" id="reservatieknop">
+                    <button type="submit" class="button btn-position buttonleft" value="Snel reserveren!"
+                        id="resknop" /><a href="./reserveren.php" class="link"> Snel reserveren </a></button>
 
                 </article>
-                <article class="offset-sm-2 col-sm-3">
-                    <button class="buttonreverse btn-position"> <a href="./voorstellingen.php"> Meer
+                <article class="col-lg-4 txtalign" id="txtalign">
+
+                    <button class="buttonreverse btn-position buttonright" id="btnmeer">
+                        <a href="./voorstellingen.php" class="link">
+                            Meer
                             weten
                         </a></button>
                 </article>
