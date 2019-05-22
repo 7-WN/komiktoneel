@@ -306,3 +306,8 @@ footer > nav > ul {
 .verzendknop{
   margin-left: 15px;
 }
+
+iframe{
+  height: 500px;
+
+}

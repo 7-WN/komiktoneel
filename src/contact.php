@@ -54,25 +54,14 @@
         </div>
 
         <div class="row my-5">
-            <article class="col">
+            <article>
                 <h3>De zaal bereiken</h3>
-                <div style="width: 700px;position: relative;"><iframe width="700" height="440"
+               <iframe class="col-12"
                         src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Venusstraat%2010%202520%20Oelegem+(Komiktoneel)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed"
                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <div
-                        style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
-                        <small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a
-                                href="http://www.googlemapsgenerator.com/zh/"></a> & <a
-                                href="https://kpnherladen.be/"></a></small></div>
-                    <style>
-                    #gmap_canvas img {
-                        max-width: none !important;
-                        background: none !important
-                    }
-                    </style>
-                </div><br />
+                    <br />
             </article>
-            <article class="col">
+            <article class="col-12">
                 <p>Dit jaar spelen we weer in de arochiezaal van Oelegem:</p>
                 <p>Venusstraat 10, 2520 Oelegem</p>
                 <p>Er zijn 60 parkeerplaatsen beschikbaar.
