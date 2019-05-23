@@ -49,10 +49,12 @@
 
   <form class="form" action="./reserveren-gegevens.php" method="POST">
     <?php if($stukResult){ 
-      while($row = mysqli_fetch_assoc($stukResult)){
-        $dagenStatement = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id =" . $row['stuk_id'];
+      /* HAAL STUK UIT DATABASE DAT ACTIEF STAAT */
+      while($stuk = mysqli_fetch_assoc($stukResult)){
+        /* HAAL ALLE DAGEN VAN DAT STUK UIT DB */
+        $dagenStatement = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id =" . $stuk['stuk_id'];
         $dagenResult = mysqli_query($con, $dagenStatement); ?>
-      <h2>Uw reservatie voor <?= $row['titel'] ?></h2>
+      <h2>Uw reservatie voor <?= $stuk['titel'] ?></h2>
       <p>Dagen:</p>
       <ul>
       <!-- PER DAG -->
