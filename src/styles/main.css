@@ -327,15 +327,57 @@ footer > nav > ul {
   padding-right: 20%;
 }
 
-.contactpage h4,.contactpage h3{
+.contactpage h4,
+.contactpage h3 {
   font-weight: 600;
 }
 
-.verzendknop{
+.verzendknop {
   margin-left: 15px;
 }
 
-iframe{
+iframe {
   height: 500px;
+}
 
+/*Reservatieformulier */
+/*Arrows*/
+
+.arrow-dark {
+  position: relative;
+  background-image: url("../images/ArrowDarkpng.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 105px;
+  margin-bottom: 60px;
+}
+
+.arrow-light {
+  position: relative;
+  background-image: url("../images/ArrowLight.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+  height: 90px;
+  margin-top: 7px;
+}
+
+.arrow-text-active {
+  position: absolute;
+  text-align: center;
+  left: 85px;
+  top: 32px;
+  color: #f3f2e3;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.arrow-text-inactive {
+  position: absolute;
+  text-align: center;
+  left: 89px;
+  top: 30px;
+  color: #141414;
+  font-size: 1.1rem;
 }
