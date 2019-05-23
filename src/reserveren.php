@@ -22,6 +22,31 @@
 <?php $title = "Reserveren"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
 <div class="container">
+<main class="container">
+    <section class="row">
+        <div class="arrow-dark col-3">
+            <p class="arrow-text-active">
+                Datum
+            </p>
+        </div>
+        <div class="arrow-light col-3">
+            <p class="arrow-text-inactive">
+                Betaling
+            </p>
+        </div>
+        <div class="arrow-light col-3">
+            <p class="arrow-text-inactive">
+                Afronding
+            </p>
+        </div>
+    </section>
+    <p> Denk eraan: eerst besteld is eerst gesteld. Vroegere reservaties worden dichter tegen het podium geplaatst.
+        We kunnen hier geen uitzonderingen in maken.</p>
+
+    <article>
+        <input type="checkbox" aria-label="Checkbox for following text input">
+    </article>
+
   <section>
     <?php if($stukResult){ 
       while($row = mysqli_fetch_assoc($stukResult)){
@@ -32,7 +57,12 @@
       <ul>
       <!-- PER DAG -->
         <?php while($dag = mysqli_fetch_assoc($dagenResult)){ ?>
-          <li><?= date("jS F, G:i", strtotime($dag["dag"])) ?>u</li>
+          <li>
+            <span class="col-4"><?= date("jS F, G:i", strtotime($dag["dag"])) ?>u</span>
+            <div class=" col-4 progress">
+              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valumax="100"></div>
+            </div>
+          </li>
         <?php } ?>
     </ul>
     <input type="number" name="aantal" value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" />
