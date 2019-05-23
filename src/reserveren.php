@@ -47,7 +47,7 @@
         <input type="checkbox" aria-label="Checkbox for following text input">
     </article>
 
-  <section>
+  <form class="form" action="./reserveren-gegevens.php" method="POST">
     <?php if($stukResult){ 
       while($row = mysqli_fetch_assoc($stukResult)){
         $dagenStatement = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id =" . $row['stuk_id'];
@@ -65,10 +65,12 @@
           </li>
         <?php } ?>
     </ul>
-    <input type="number" name="aantal" value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" />
+      <h3>Aantal:</h3>
+      <input class="col-1 form-control" type="number" name="aantal" value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" />
+      <button type="submit" class="button">Volgende</button>
     <?php }} else /* if($stukResult) */ { ?>
       Reservaties zijn momenteel niet open
     <?php } ?>
-  </section>
+  </form>
 </div>
 <?php include 'components/foot.php' ?>
