@@ -63,9 +63,9 @@
 
             <div class="row">
                 <article class="offset-4 col-lg-4" id="artikelaantal">
-                    <form class="form-inline" action="reserveren.php" id="reservatie">
-                        <label for="Aantal" class="buttonleft" id="labelres">Aantal</label>
-                        <input class="form-control input-size" type="number" name="seats" max="40" min="1"
+                    <form class="form-inline" action="reserveren.php" id="reservatie" method="GET">
+                        <label for="aantal" class="buttonleft" id="labelres">Aantal</label>
+                        <input class="form-control input-size" type="number" name="aantal" max="80" min="1"
                             placeholder="0" />
                 </article>
                 <article class="col-lg-4">
@@ -89,9 +89,10 @@
             </article>
 
             <div class="row">
+            <input type="hidden" name="stuk" value="<?= $stuk['stuk_id'] ?>" />
                 <article class="offset-4 col-lg-4" id="reservatieknop">
-                    <button type="submit" class="button btn-position buttonleft" value="Snel reserveren!"
-                        id="resknop" /><a href="./reserveren.php" class="link"> Snel reserveren </a></button>
+                    <button href="./reserveren.php" type="submit" class="button btn-position buttonleft" value="Snel reserveren!"
+                        id="resknop"><span class="link">Snel reserveren</span></button>
 
                 </article>
                 <article class="col-lg-4 txtalign" id="txtalign">
