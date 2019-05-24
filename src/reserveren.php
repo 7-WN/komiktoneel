@@ -54,18 +54,21 @@
             <p>Dagen:</p>
 
             <!-- Jarne zijn rommeltje om de dagen in een checkbox form te krijgen -->
+            <h1> <?php echo "java fix" ?> </h1>
+
             <ul>
-                <?php while($dag = mysql_fetch_assoc($dagenResult)) {?>
+                <?php while($dag = mysqli_fetch_assoc($dagenResult)) { ?>
                 <li>
-                    <input type="checkbox" name="dagen" value="<?= $dag['dag_id']?>" </li> <ul>
+                    <input type="checkbox" name="dagen" value="<?= $dag['dag_id']?>">
+                    <?= date("jS F, G:i", strtotime($dag["dag"])) ?>
+                </li>
+                <?php } ?>
+            </ul>
+            <ul>
 
-                    }?>
-                    <!-- PER DAG -->
-                    <?php while($dag = mysqli_fetch_assoc($dagenResult)){ ?>
+                <!-- PER DAG -->
+                <?php while($dag = mysqli_fetch_assoc($dagenResult)){ ?>
                 <li>
-
-
-
                     <span class="col-4"><?= date("jS F, G:i", strtotime($dag["dag"])) ?>u</span>
                     <div class=" col-4 progress">
                         <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
