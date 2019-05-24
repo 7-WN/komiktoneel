@@ -1,69 +1,72 @@
 <?php $title = "Fotos"; include 'components/head.php' ?>
 
 <?php include 'components/header.php'?>
-<div class="row">
-  <div class="col-md-12">
+<main>
+<div class="container">
+        <div class="row">
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="gallery-title">Gallery</h1>
+        </div>
 
-    <div id="mdb-lightbox-ui"></div>
+        <div align="center">
+            <button class="btn btn-default filter-button" data-filter="all">All</button>
+            <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
+            <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
+            <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
+            <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+        </div>
+        <br/>
 
-    <div class="mdb-lightbox">
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid">
-        </a>
-      </figure>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
-      <figure class="col-md-4">
-        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
-          <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid" />
-        </a>
-      </figure>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
 
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            </div>
+        </div>
     </div>
-
-  </div>
-</div>
+</main>
 <?php include 'components/foot.php' ?>
