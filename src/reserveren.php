@@ -52,31 +52,31 @@
         $dagenResult = mysqli_query($con, $dagenStatement); ?>
             <h2>Uw reservatie voor <?= $stuk['titel'] ?></h2>
             <p>Dagen:</p>
-
-            <!-- Jarne zijn rommeltje om de dagen in een checkbox form te krijgen -->
-            <h1> <?php echo "java fix" ?> </h1>
-
-            <ul>
-                <?php while($dag = mysqli_fetch_assoc($dagenResult)) { ?>
-                <li>
-                    <input type="checkbox" name="dagen" value="<?= $dag['dag_id']?>">
-                    <?= date("jS F, G:i", strtotime($dag["dag"])) ?>
-                </li>
-                <?php } ?>
-            </ul>
-            <ul>
-
-                <!-- PER DAG -->
                 <?php while($dag = mysqli_fetch_assoc($dagenResult)){ ?>
-                <li>
-                    <span class="col-4"><?= date("jS F, G:i", strtotime($dag["dag"])) ?>u</span>
-                    <div class=" col-4 progress">
-                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valumax="100"></div>
+                <div class="row">
+                    <span class="progress-label">
+                    <input 
+                        class="mr-3" 
+                        type="radio" 
+                        name="dag" 
+                        value=<?= $dag["dag_id"] ?>
+                        <?php echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ?>
+                    />
+                    <?= date("jS F, G:i", strtotime($dag["dag"])) ?>u
+                    </span>
+                    <div class="progress col-8">
+                        <div 
+                            class="progress-bar" 
+                            role="progressbar" 
+                            style="width: 25%" 
+                            aria-valuenow="25"
+                            aria-valuemin="0" 
+                            aria-valumax="100">
+                        </div>
                     </div>
-                </li>
+                </div>
                 <?php } ?>
-            </ul>
+                <br />
             <h3>Aantal:</h3>
             <input class="col-1 form-control" type="number" name="aantal"
                 value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" />
