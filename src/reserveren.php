@@ -1,6 +1,9 @@
 <?php
 
   include "php/dbconfig.php";
+ 
+  /* MAXIMUM AANTAL TOESCHOUWERS PER DAG */
+  $maxAantal = 180;
 
   if(isset($_GET['stuk'])){
     $stukKeuze = $_GET['stuk'];
@@ -52,7 +55,11 @@
         $dagenResult = mysqli_query($con, $dagenStatement); ?>
             <h2>Uw reservatie voor <?= $stuk['titel'] ?></h2>
             <p>Dagen:</p>
-                <?php while($dag = mysqli_fetch_assoc($dagenResult)){ ?>
+                <?php while($dag = mysqli_fetch_assoc($dagenResult)){
+                    $dagAantalStatement = "SELECT SUM(aantal) AS 'totaalAantal' FROM reservaties WHERE dag_id=" . $dag["dag_id"]; 
+                    $dagAantalResult = mysqli_query($con, $dagAantalStatement);
+                    $dagAantal = mysqli_fetch_assoc($dagAantalResult);
+                    $dagPercent = 100 * ($dagAantal['totaalAantal'] / $maxAantal) ?>
                 <div class="row">
                     <span class="progress-label">
                     <input 
@@ -68,10 +75,11 @@
                         <div 
                             class="progress-bar" 
                             role="progressbar" 
-                            style="width: 25%" 
-                            aria-valuenow="25"
+                            style="<?= "width: " . $dagPercent . "%;" ?>"
+                            aria-valuenow=<?= $dagAantal['totaalAantal'] ?>
                             aria-valuemin="0" 
-                            aria-valumax="100">
+                            aria-valuemax=<?= $maxAantal ?>>
+                        <?= floor($dagPercent) ?>%
                         </div>
                     </div>
                 </div>
