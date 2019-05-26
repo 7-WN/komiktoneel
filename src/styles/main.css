@@ -346,6 +346,10 @@ iframe {
   margin-right: 1em;
 }
 
+.progress {
+  padding: 0;
+}
+
 /*Arrows*/
 
 .arrow-dark {

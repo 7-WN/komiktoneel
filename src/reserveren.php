@@ -67,7 +67,10 @@
                         type="radio" 
                         name="dag" 
                         value=<?= $dag["dag_id"] ?>
-                        <?php echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ?>
+                        <?php if(isset($dagKeuze)) { 
+                            echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ;
+                        } ?>
+                        required
                     />
                     <?= date("jS F, G:i", strtotime($dag["dag"])) ?>u
                     </span>
@@ -86,9 +89,14 @@
                 <?php } ?>
                 <br />
             <h3>Aantal:</h3>
-            <input class="col-1 form-control" type="number" name="aantal"
-                value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" />
-            <button type="submit" class="button">Volgende</button>
+            <input 
+                class="col-1 form-control" 
+                type="number" 
+                name="aantal"
+                min="1"
+                value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" 
+                required />
+            <button name="submit" type="submit" class="button">Volgende</button>
             <?php }} else /* if($stukResult) */ { ?>
             Reservaties zijn momenteel niet open
             <?php } ?>
