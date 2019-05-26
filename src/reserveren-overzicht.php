@@ -22,6 +22,17 @@
 
     if(isset($_POST['submit'])){
         storeAllInSession();
+
+        $naam = $_SESSION['voornaam'] . " " . $_SESSION['achternaam'];
+        $aantal = $_SESSION['aantal'];
+        $dag = $_SESSION['dag'];
+        $email = $_SESSION['email'];
+        $tel = $_SESSION['telefoon'];
+        $extra = $_SESSION['extra'];
+
+        if(isset($SESSION['straat']) && isset($SESSION['postcode']) && isset($SESSION['plaats'])){
+            $adres = $SESSION['straat'] . ", " . $SESSION['postcode'] . " " . $SESSION['plaats'];
+        }
     }
 
 ?>

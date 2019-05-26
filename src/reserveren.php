@@ -20,6 +20,10 @@
     $aantalKeuze = $_GET['aantal'];
   }
 
+  if(isset($_SESSION['dag']) && isset($_SESSION['aantal'])){
+      header("Location: reserveren-gegevens.php");
+  }
+
 ?>
 
 <?php $title = "Reserveren"; include 'components/head.php' ?>
