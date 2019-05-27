@@ -2,7 +2,7 @@
   
   $host = "localhost";
   $user = "root";
-  $pwd = "";
+  $pwd = "root";
   $db = "komikdb";
 
   $con = mysqli_connect($host, $user, $pwd, $db);
