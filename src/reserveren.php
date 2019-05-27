@@ -1,6 +1,9 @@
 <?php
 
   include "php/dbconfig.php";
+ 
+  /* MAXIMUM AANTAL TOESCHOUWERS PER DAG */
+  $maxAantal = 180;
 
   if(isset($_GET['stuk'])){
     $stukKeuze = $_GET['stuk'];
@@ -15,6 +18,10 @@
   if(isset($_GET['datum']) && isset($_GET['aantal'])){
     $dagKeuze = $_GET['datum'];
     $aantalKeuze = $_GET['aantal'];
+  }
+
+  if(isset($_SESSION['dag']) && isset($_SESSION['aantal'])){
+      header("Location: reserveren-gegevens.php");
   }
 
 ?>
@@ -52,35 +59,48 @@
         $dagenResult = mysqli_query($con, $dagenStatement); ?>
             <h2>Uw reservatie voor <?= $stuk['titel'] ?></h2>
             <p>Dagen:</p>
-
-            <!-- Jarne zijn rommeltje om de dagen in een checkbox form te krijgen -->
-            <h1> <?php echo "java fix" ?> </h1>
-
-            <ul>
-                <?php while($dag = mysqli_fetch_assoc($dagenResult)) { ?>
-                <li>
-                    <input type="checkbox" name="dagen" value="<?= $dag['dag_id']?>">
-                    <?= date("jS F, G:i", strtotime($dag["dag"])) ?>
-                </li>
-                <?php } ?>
-            </ul>
-            <ul>
-
-                <!-- PER DAG -->
-                <?php while($dag = mysqli_fetch_assoc($dagenResult)){ ?>
-                <li>
-                    <span class="col-4"><?= date("jS F, G:i", strtotime($dag["dag"])) ?>u</span>
-                    <div class=" col-4 progress">
-                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valumax="100"></div>
+                <?php while($dag = mysqli_fetch_assoc($dagenResult)){
+                    $dagAantalStatement = "SELECT SUM(aantal) AS 'totaalAantal' FROM reservaties WHERE dag_id=" . $dag["dag_id"]; 
+                    $dagAantalResult = mysqli_query($con, $dagAantalStatement);
+                    $dagAantal = mysqli_fetch_assoc($dagAantalResult);
+                    $dagPercent = 100 * ($dagAantal['totaalAantal'] / $maxAantal) ?>
+                <div class="row">
+                    <span class="progress-label">
+                    <input 
+                        class="mr-3" 
+                        type="radio" 
+                        name="dag" 
+                        value=<?= $dag["dag_id"] ?>
+                        <?php if(isset($dagKeuze)) { 
+                            echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ;
+                        } ?>
+                        required
+                    />
+                    <?= date("jS F, G:i", strtotime($dag["dag"])) ?>u
+                    </span>
+                    <div class="progress col-8">
+                        <div 
+                            class="progress-bar" 
+                            role="progressbar" 
+                            style="<?= "width: " . $dagPercent . "%;" ?>"
+                            aria-valuenow=<?= $dagAantal['totaalAantal'] ?>
+                            aria-valuemin="0" 
+                            aria-valuemax=<?= $maxAantal ?>>
+                        <?= floor($dagPercent) ?>%
+                        </div>
                     </div>
-                </li>
+                </div>
                 <?php } ?>
-            </ul>
+                <br />
             <h3>Aantal:</h3>
-            <input class="col-1 form-control" type="number" name="aantal"
-                value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" />
-            <button type="submit" class="button">Volgende</button>
+            <input 
+                class="col-1 form-control" 
+                type="number" 
+                name="aantal"
+                min="1"
+                value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" 
+                required />
+            <button name="submit" type="submit" class="button">Volgende</button>
             <?php }} else /* if($stukResult) */ { ?>
             Reservaties zijn momenteel niet open
             <?php } ?>
