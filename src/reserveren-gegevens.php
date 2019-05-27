@@ -73,7 +73,7 @@
         <textarea name="extra" class="col-12" rows="5"
             placeholder="Heeft u nog een vraag, commentaar of een opmerking?">
             <?php if(isset($_SESSION['extra'])){ echo $_SESSION['extra']; } ?>
-        </textarea>
+</textarea>
     </div>
     <button type="submit" name="submit" class="button">Volgende stap</button>
     </form>
