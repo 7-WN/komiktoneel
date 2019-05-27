@@ -82,7 +82,7 @@
                         } ?>
                         required
                     />
-                    <?= date("jS F, G:i", strtotime($dag["dag"])) ?>u
+                    <?= date("l jS F, G:i", strtotime($dag["dag"])) ?>u
                     </span>
                     <div class="progress col-8">
                         <div 

@@ -80,7 +80,7 @@
                             $resultDagen = mysqli_query($con, $statementDagen);
                             while($row = mysqli_fetch_assoc($resultDagen)){ ?>
                             <option value="<?= $row['dag_id'] ?>">
-                                <?= date("jS F, G:i", strtotime($row["dag"])) ?>u
+                                <?= date("l jS F, G:i", strtotime($row["dag"])) ?>u
                             </option>
                             <?php } ?>
                         </select>
