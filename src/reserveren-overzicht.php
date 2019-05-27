@@ -36,9 +36,16 @@
     }
 
 ?>
-
-
-
+<div class="container">
+    <h1>Overzicht van uw reservatie</h1>
+    <h2 class="my-5">Reservatienummer #<?= "444" ?></h2>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
 <?php
 include('./components/foot.php');
 ?>

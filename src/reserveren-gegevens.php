@@ -1,8 +1,10 @@
 <?php 
 
     $title = "Reserveren - gegevens";
+
     include('./components/head.php');
     include('./components/header.php');
+    include 'php/dbconfig.php';
 
     session_start();
 
@@ -17,13 +19,17 @@
         header("Location: reserveren.php");
     }
 
+    $dagenStatement = "SELECT dag_id, dag FROM dagen WHERE dag_id=" . $dag;
+    $dagenResult = mysqli_query($con, $dagenStatement);
+    $dag = mysqli_fetch_assoc($dagenResult);
+
 ?>
 
 <div class="container">
-    <div class="lead">
-        U gaat reserveren voor <?= $aantal ?> personen op <?= $dag ?>.
+    <h2>
+        U gaat reserveren voor <?= $aantal ?> personen op <?= date("jS F", strtotime($dag["dag"])) ?>.
         <a href="reserveren.php">Klik hier om dit aan te passen.</a>
-    </div>
+    </h2>
     <p class="mb-5 mt-2">Vul hier uw gegevens in om de reservatie te vervolledigen. Voor meer info over het gebruik van uw gegevens, bekijk ons
         <a href="privacy.php">privacy-beleid</a>.
     </p>

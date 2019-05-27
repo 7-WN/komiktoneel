@@ -5,6 +5,9 @@
   /* MAXIMUM AANTAL TOESCHOUWERS PER DAG */
   $maxAantal = 180;
 
+  session_start();
+
+  /* ZET HET STUK */
   if(isset($_GET['stuk'])){
     $stukKeuze = $_GET['stuk'];
     $stukStatement = "SELECT * FROM stukken WHERE actief=1 AND stuk_id=" . $stukKeuze;
@@ -15,13 +18,16 @@
     $stukResult = mysqli_query($con, $stukStatement);
   }
   
+  /* CHECK OF KEUZES GEMAAKT ZIJN VIA FORM OP HOMEPAGINA */
   if(isset($_GET['datum']) && isset($_GET['aantal'])){
     $dagKeuze = $_GET['datum'];
     $aantalKeuze = $_GET['aantal'];
   }
 
+  /* CHECK OF ER SESSIEVARIABELEN ZIJN */
   if(isset($_SESSION['dag']) && isset($_SESSION['aantal'])){
-      header("Location: reserveren-gegevens.php");
+      $dagKeuze = $_SESSION['dag'];
+      $aantalKeuze = $_SESSION['aantal'];
   }
 
 ?>
@@ -71,7 +77,7 @@
                         type="radio" 
                         name="dag" 
                         value=<?= $dag["dag_id"] ?>
-                        <?php if(isset($dagKeuze)) { 
+                        <?php if(isset($dagKeuze) || isset($_SESSION['dagkeuze'])) { 
                             echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ;
                         } ?>
                         required
