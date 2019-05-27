@@ -12,3 +12,7 @@
   }
 
   echo "<script>console.log('Database connection succesful')</script>";
+
+  /* VARIABELEN DIE GE-EDIT MOETEN WORDEN */
+  $maxAantal = 180;
+  $prijsPerTicket = 9;
