@@ -47,8 +47,13 @@
                 </p>
             </div>
         </section>
-        <p> Denk eraan: eerst besteld is eerst gesteld. Vroegere reservaties worden dichter tegen het podium geplaatst.
-            We kunnen hier geen uitzonderingen in maken.</p>
+        <span style="text-align:justify">
+            <p> Denk eraan: eerst besteld is eerst gesteld. Vroegere reservaties worden
+                dichter tegen
+                het podium geplaatst.
+                We kunnen hier geen uitzonderingen in maken.
+            </p>
+        </span>
 
         <form class="form" action="./reserveren-gegevens.php" method="POST">
             <?php if($stukResult){ 
@@ -59,48 +64,38 @@
         $dagenResult = mysqli_query($con, $dagenStatement); ?>
             <h2>Uw reservatie voor <?= $stuk['titel'] ?></h2>
             <p>Dagen:</p>
-                <?php while($dag = mysqli_fetch_assoc($dagenResult)){
+            <?php while($dag = mysqli_fetch_assoc($dagenResult)){
                     $dagAantalStatement = "SELECT SUM(aantal) AS 'totaalAantal' FROM reservaties WHERE dag_id=" . $dag["dag_id"]; 
                     $dagAantalResult = mysqli_query($con, $dagAantalStatement);
                     $dagAantal = mysqli_fetch_assoc($dagAantalResult);
                     $dagPercent = 100 * ($dagAantal['totaalAantal'] / $maxAantal) ?>
-                <div class="row">
+            <div class="form-row">
+                <div class="form-group col-12">
                     <span class="progress-label">
-                    <input 
-                        class="mr-3" 
-                        type="radio" 
-                        name="dag" 
-                        value=<?= $dag["dag_id"] ?>
-                        <?php if(isset($dagKeuze)) { 
+                        <input class="mr-3" type="radio" name="dag" value=<?= $dag["dag_id"] ?> <?php if(isset($dagKeuze)) { 
                             echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ;
-                        } ?>
-                        required
-                    />
-                    <?= date("jS F, G:i", strtotime($dag["dag"])) ?>u
+                        } ?> required />
+                        <?= date("jS F, G:i", strtotime($dag["dag"])) ?>u
                     </span>
-                    <div class="progress col-8">
-                        <div 
-                            class="progress-bar" 
-                            role="progressbar" 
-                            style="<?= "width: " . $dagPercent . "%;" ?>"
-                            aria-valuenow=<?= $dagAantal['totaalAantal'] ?>
-                            aria-valuemin="0" 
+                    <div class="progress col-6">
+                        <div class="progress-bar" role="progressbar" style="<?= "width: " . $dagPercent . "%;" ?>"
+                            aria-valuenow=<?= $dagAantal['totaalAantal'] ?> aria-valuemin="0"
                             aria-valuemax=<?= $maxAantal ?>>
-                        <?= floor($dagPercent) ?>%
+                            <?= floor($dagPercent) ?>%
                         </div>
                     </div>
                 </div>
-                <?php } ?>
-                <br />
-            <h3>Aantal:</h3>
-            <input 
-                class="col-1 form-control" 
-                type="number" 
-                name="aantal"
-                min="1"
-                value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" 
-                required />
-            <button name="submit" type="submit" class="button">Volgende</button>
+            </div>
+            <?php } ?>
+            <br />
+            <div class="row">
+                <div class="form-group offset-md-4 col-4">
+                    <h3>Aantal plaatsen</h3>
+                    <input class="col-1 form-control" type="number" name="aantal" min="1"
+                        value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" required />
+                    <button name="submit" type="submit" class="button">Volgende stap</button>
+                </div>
+            </div>
             <?php }} else /* if($stukResult) */ { ?>
             Reservaties zijn momenteel niet open
             <?php } ?>
