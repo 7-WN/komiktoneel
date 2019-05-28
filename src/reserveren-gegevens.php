@@ -1,8 +1,10 @@
 <?php 
 
     $title = "Reserveren - gegevens";
+
     include('./components/head.php');
     include('./components/header.php');
+    include 'php/dbconfig.php';
 
     session_start();
 
@@ -16,6 +18,10 @@
     } else {
         header("Location: reserveren.php");
     }
+
+    $dagenStatement = "SELECT dag_id, dag FROM dagen WHERE dag_id=" . $dag;
+    $dagenResult = mysqli_query($con, $dagenStatement);
+    $dag = mysqli_fetch_assoc($dagenResult);
 
 ?>
 

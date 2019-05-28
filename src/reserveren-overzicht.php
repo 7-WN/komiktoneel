@@ -1,6 +1,6 @@
 <?php 
 
-    $title = "Reserveren - overzicht";
+    $title = "Reservatie - overzicht";
     include('./components/head.php');
     include('./components/header.php');
 
@@ -30,15 +30,25 @@
         $tel = $_SESSION['telefoon'];
         $extra = $_SESSION['extra'];
 
-        if(isset($SESSION['straat']) && isset($SESSION['postcode']) && isset($SESSION['plaats'])){
-            $adres = $SESSION['straat'] . ", " . $SESSION['postcode'] . " " . $SESSION['plaats'];
+        if(isset($_SESSION['straat']) && isset($_SESSION['postcode']) && isset($_SESSION['plaats'])){
+            $adres = $_SESSION['straat'] . ", " . $_SESSION['postcode'] . " " . $_SESSION['plaats'];
         }
     }
 
 ?>
-
-
-
+<div class="container">
+    <h1 class="my-5">Uw reservatie</h1>
+    <p>Gelieve onderstaande gegevens nog eens na te kijken. Als deze kloppen, kan u een betalingsmethode kiezen.</p>
+    <ul>
+        <li><b>Naam: </b><?= $naam ?></li>
+        <li><b>Adres: </b><?= $adres ?></li>
+        <li><b>E-mail: </b><?= $email ?></li>
+        <li><b>Telefoon: </b><?= $tel ?></li>
+    </ul>
+    <a href="reserveren-gegevens.php">Uw gegevens aanpassen</a>
+    <p class="lead mt-5">U reserveert voor <?= " " ?> personen op <?= " " ?></p>
+    <a href="reserveren.php">Aantal of datum aanpassen</a>
+</div>
 <?php
 include('./components/foot.php');
 ?>
