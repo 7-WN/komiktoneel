@@ -14,7 +14,9 @@
 
         $aantal = $_SESSION['aantal'];
         $dag = $_SESSION['dag'];
-
+    } elseif(isset($_SESSION['dag']) && isset($_SESSION['aantal'])) {
+        $aantal = $_SESSION['aantal'];
+        $dag = $_SESSION['dag'];
     } else {
         header("Location: reserveren.php");
     }

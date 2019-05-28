@@ -1,12 +1,12 @@
 <?php 
 
+    session_start();
+
     $title = "Reservatie - overzicht";
     include('./components/head.php');
     include('./components/header.php');
 
     include 'php/dbconfig.php';
-
-    session_start();
 
     function storeAllInSession() {
         $_SESSION['voornaam'] = $_POST['voornaam'];
@@ -22,7 +22,7 @@
         }
     }
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit']) || isset($_SESSION)){
         storeAllInSession();
 
         $naam = $_SESSION['voornaam'] . " " . $_SESSION['achternaam'];
@@ -35,6 +35,8 @@
         if(isset($_SESSION['straat']) && isset($_SESSION['postcode']) && isset($_SESSION['plaats'])){
             $adres = $_SESSION['straat'] . ", " . $_SESSION['postcode'] . " " . $_SESSION['plaats'];
         }
+    } else {
+        header("Location: reserveren.php");
     }
 
     $dagStatement = "SELECT * FROM dagen WHERE dag_id=" . $dag;
@@ -55,7 +57,7 @@
     <p class="mt-5">U reserveert voor <b><?= $aantal ?></b> personen op <b><?= date("l jS F", strtotime($dag["dag"])) ?></b>. 
         De voorstelling begint om <b><?= date("G:i", strtotime($dag["dag"])) ?>u.</b></p>
     <a href="reserveren.php">Aantal of datum aanpassen</a>
-    <p class="my-5 text-center display-4 ">€ 36.00</p>
+    <p class="my-5 text-center display-4 ">€ <?= number_format($prijsPerTicket * $aantal, 2) ?></p>
     <div class="row">
         <button class="button betaling-keuze-button">Overschrijving</button>
         <button class="button buttonreverse betaling-keuze-button">Ik betaal ter plaatse</button>
