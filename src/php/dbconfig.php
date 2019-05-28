@@ -2,7 +2,7 @@
   
   $host = "localhost";
   $user = "root";
-  $pwd = "root";
+  $pwd = "";
   $db = "komikdb";
 
   $con = mysqli_connect($host, $user, $pwd, $db);
@@ -12,3 +12,7 @@
   }
 
   echo "<script>console.log('Database connection succesful')</script>";
+
+  /* VARIABELEN DIE GE-EDIT MOETEN WORDEN */
+  $maxAantal = 180;
+  $prijsPerTicket = 9;

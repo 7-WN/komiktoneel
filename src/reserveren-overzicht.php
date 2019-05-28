@@ -4,6 +4,8 @@
     include('./components/head.php');
     include('./components/header.php');
 
+    include 'php/dbconfig.php';
+
     session_start();
 
     function storeAllInSession() {
@@ -35,6 +37,10 @@
         }
     }
 
+    $dagStatement = "SELECT * FROM dagen WHERE dag_id=" . $dag;
+    $dagResult = mysqli_query($con, $dagStatement);
+    $dag = mysqli_fetch_assoc($dagResult);
+
 ?>
 <div class="container">
     <h1 class="my-5">Uw reservatie</h1>
@@ -46,8 +52,15 @@
         <li><b>Telefoon: </b><?= $tel ?></li>
     </ul>
     <a href="reserveren-gegevens.php">Uw gegevens aanpassen</a>
-    <p class="lead mt-5">U reserveert voor <?= " " ?> personen op <?= " " ?></p>
+    <p class="mt-5">U reserveert voor <b><?= $aantal ?></b> personen op <b><?= date("l jS F", strtotime($dag["dag"])) ?></b>. 
+        De voorstelling begint om <b><?= date("G:i", strtotime($dag["dag"])) ?>u.</b></p>
     <a href="reserveren.php">Aantal of datum aanpassen</a>
+    <p class="my-5 text-center display-4 ">€ 36.00</p>
+    <div class="row">
+        <button class="button betaling-keuze-button">Overschrijving</button>
+        <button class="button buttonreverse betaling-keuze-button">Ik betaal ter plaatse</button>
+    </div>
+    <button class="button my-5">Betalen</button>
 </div>
 <?php
 include('./components/foot.php');
