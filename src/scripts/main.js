@@ -43,3 +43,34 @@ $(document).ready(function() {
   }
   $(this).addClass("active");
 });
+
+// RESERVATIE OVERZICHT SELECTIE BETALING
+$(document).ready(function() {
+  // OVERSCHRIJVING
+  $("#overschrijvingKnop").click(function() {
+    var knop = $("#overschrijvingKnop");
+    var andereKnop = $("#terPlaatseKnop");
+    var input = $("#overschrijvingKeuze");
+    var andereInput = $("#terPlaatseKeuze");
+
+    knop.addClass("gekozen");
+    andereKnop.removeClass("gekozen");
+
+    input.attr("checked", "checked");
+    andereInput.removeAttr("checked");
+  });
+
+  // TER PLAATSE
+  $("#terPlaatseKnop").click(function() {
+    var knop = $("#terPlaatseKnop");
+    var andereKnop = $("#overschrijvingKnop");
+    var input = $("#terPlaatseKeuze");
+    var andereInput = $("#overschrijvingKeuze");
+
+    knop.addClass("gekozen");
+    andereKnop.removeClass("gekozen");
+
+    input.attr("checked", "checked");
+    andereInput.removeAttr("checked");
+  });
+});

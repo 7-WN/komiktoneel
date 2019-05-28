@@ -46,24 +46,27 @@
 ?>
 <div class="container">
     <h1 class="my-5">Uw reservatie</h1>
-    <p>Gelieve onderstaande gegevens nog eens na te kijken. Als deze kloppen, kan u een betalingsmethode kiezen.</p>
-    <ul>
-        <li><b>Naam: </b><?= $naam ?></li>
-        <li><b>Adres: </b><?= $adres ?></li>
-        <li><b>E-mail: </b><?= $email ?></li>
-        <li><b>Telefoon: </b><?= $tel ?></li>
-    </ul>
-    <a href="reserveren-gegevens.php">Uw gegevens aanpassen</a>
-    <p class="mt-5">U reserveert voor <b><?= $aantal ?></b> personen op <b><?= date("l jS F", strtotime($dag["dag"])) ?></b>. 
-        De voorstelling begint om <b><?= date("G:i", strtotime($dag["dag"])) ?>u.</b></p>
-    <a href="reserveren.php">Aantal of datum aanpassen</a>
-    <p class="my-5 text-center display-4 ">€ <?= number_format($prijsPerTicket * $aantal, 2) ?></p>
-    <div class="row">
-        <button class="button betaling-keuze-button">Overschrijving</button>
-        <button class="button buttonreverse betaling-keuze-button">Ik betaal ter plaatse</button>
-    </div>
-    <button class="button my-5">Betalen</button>
+    <form action="php/stuur-reservatie.php" method="POST" class="form">
+        <p>Gelieve onderstaande gegevens nog eens na te kijken. Als deze kloppen, kan u een betalingsmethode kiezen.</p>
+        <ul>
+            <li><b>Naam: </b><?= $naam ?></li>
+            <li><b>Adres: </b><?php echo $adres === null ? $adres : "<u>Geen adres opgegeven</u>" ?></li>
+            <li><b>E-mail: </b><?= $email ?></li>
+            <li><b>Telefoon: </b><?= $tel ?></li>
+        </ul>
+        <a href="reserveren-gegevens.php">Uw gegevens aanpassen</a>
+        <p class="mt-5">U reserveert voor <b><?= $aantal ?></b> personen op <b><?= date("l jS F", strtotime($dag["dag"])) ?></b>. 
+            De voorstelling begint om <b><?= date("G:i", strtotime($dag["dag"])) ?>u.</b></p>
+        <a href="reserveren.php">Aantal of datum aanpassen</a>
+        <p class="my-5 text-center display-4 ">€ <?= number_format($prijsPerTicket * $aantal, 2) ?></p>
+        <div class="row">
+            <button type="button" class="button buttonreverse col-4 betaling-keuze-button" id="overschrijvingKnop">Overschrijving</button>
+            <button type="button" class="button buttonreverse betaling-keuze-button col-4 offset-4" id="terPlaatseKnop">Ik betaal ter plaatse</button>
+        </div>
+        <input type="radio" class="d-none" name="betalingswijze" value="overschrijving" id="overschrijvingKeuze">
+        <input type="radio" class="d-none" name="betalingswijze" value="terplaatse" id="terPlaatseKeuze">
+        <button type="submit" class="button my-5">Betalen</button>
+    </form>
 </div>
-<?php
-include('./components/foot.php');
-?>
+
+<?php include('./components/foot.php'); ?>

@@ -355,6 +355,16 @@ iframe {
   height: 1.5rem;
 }
 
+.betaling-keuze-button {
+  height: 15rem;
+  font-size: 2rem;
+}
+
+.betaling-keuze-button.gekozen {
+  background-color: #3195a6 !important;
+  color: #f3f2e3;
+}
+
 input[type="radio"] {
   -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
   -moz-appearance: checkbox; /* Firefox */
