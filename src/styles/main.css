@@ -21,6 +21,7 @@ kleur
 body {
   background-color: #f3f2e3;
 }
+
 h1 {
   font-size: 5rem;
   font-family: "Playfair Display", Serif;
@@ -28,6 +29,8 @@ h1 {
 
 h2 {
   color: #5d0a17;
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
 }
 
 a:active,
@@ -325,10 +328,8 @@ footer > nav > ul {
 }
 
 /*Contact page*/
-
 .contactpage {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 0px !important;
 }
 
 .contactpage h4,
@@ -336,14 +337,16 @@ footer > nav > ul {
   font-weight: 600;
 }
 
-.verzendknop {
-  margin-left: 15px;
-}
-
 iframe {
   height: 500px;
+  width: 725px;
 }
 
+.contact-info {
+  list-style-type: none;
+  padding: 0px;
+  margin-bottom: 2rem;
+}
 /*Reservatieformulier */
 .progress-label {
   float: left;
@@ -510,6 +513,10 @@ input[type="radio"] {
     max-width: 25vw;
     margin: 20px auto;
   }
+  iframe {
+    height: 350px;
+    width: 350px;
+  }
 }
 
 /*Small devices (landscape phones, 576px and up) */
@@ -533,6 +540,10 @@ input[type="radio"] {
     max-width: 25vw;
     margin: 20px auto;
   }
+  iframe {
+    height: 500px;
+    width: 500px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -546,6 +557,10 @@ input[type="radio"] {
     max-width: 20vw;
     margin: 20px auto;
   }
+  iframe {
+    height: 500px;
+    width: 600px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -558,5 +573,9 @@ input[type="radio"] {
   .progress-arrow-active {
     max-width: 18vw;
     margin: 20px auto;
+  }
+  iframe {
+    height: 500px;
+    width: 725px;
   }
 }
