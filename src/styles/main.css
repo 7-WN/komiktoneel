@@ -30,15 +30,42 @@ h2 {
   color: #5d0a17;
 }
 
+a:active,
+a:hover,
+a:visited,
+a {
+  text-decoration: none;
+}
+
 .container {
   margin-top: 50px;
   max-width: 80vw;
 }
-
 @media screen and (max-width: 1366px) {
   .container {
     margin-top: 50px;
     max-width: 90vw;
+  }
+
+  .hero-image > .hero-text > h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-image > .hero-text2 {
+    padding-bottom: 10px;
+  }
+
+  .hero-image > .hero-text2 > p {
+    margin-bottom: 10px;
+  }
+
+  .hero-stuk {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-image > .hero-text2 > button {
+    margin-top: 0;
   }
 }
 
@@ -95,29 +122,6 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
-
-@media screen and (max-width: 1366px) {
-  .hero-image > .hero-text > h1 {
-    font-size: 3.5rem;
-  }
-
-  .hero-image > .hero-text2 {
-    padding-bottom: 10px;
-  }
-
-  .hero-image > .hero-text2 > p {
-    margin-bottom: 10px;
-  }
-
-  .hero-stuk {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-
-  .hero-image > .hero-text2 > button {
-    margin-top: 0;
-  }
 }
 
 .hero-text {
@@ -343,7 +347,6 @@ iframe {
 /*Reservatieformulier */
 .progress-label {
   float: left;
-  margin-right: 1em;
 }
 
 .progress {
@@ -364,6 +367,14 @@ input[type="radio"] {
   border: 4px solid #3195a6;
 }
 
+.btn-next {
+  margin: 40px 12%;
+}
+
+.input-aantal {
+  width: 70px;
+  margin: 0 auto;
+}
 /*Arrows*/
 
 .arrow-dark {
@@ -405,6 +416,19 @@ input[type="radio"] {
   font-size: 1.1rem;
 }
 
+.progress-arrow {
+  max-width: 15vw;
+  margin: 20px auto;
+}
+
+.progress-arrow-active {
+  max-width: 18vw;
+  margin: 20px auto;
+}
+
+.progress-margin {
+  margin: 4% auto 7%;
+}
 /*album*/
 
 .gallery-title {
@@ -449,4 +473,90 @@ input[type="radio"] {
 
 .gallery_product {
   margin-bottom: 30px;
+}
+
+/*Media queries */
+
+@media screen and (max-width: 767px) {
+  .progress {
+    padding: 0;
+    float: right;
+    border-radius: 0;
+    border: 1px solid #141414;
+    background-color: white;
+    height: 1.5rem;
+    margin: 20px -35px 20px 0px;
+  }
+
+  .progress-arrow {
+    max-width: 15vw;
+    margin: 20px auto;
+  }
+
+  .progress-arrow-active {
+    max-width: 18vw;
+    margin: 20px auto;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .progress-arrow {
+    max-width: 25vw;
+    margin: 20px auto;
+  }
+
+  .progress-arrow-active {
+    max-width: 25vw;
+    margin: 20px auto;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .progress {
+    padding: 0;
+    float: right;
+    border-radius: 0;
+    border: 1px solid #141414;
+    background-color: white;
+    height: 1.5rem;
+    margin: 20px -35px 20px 0px;
+  }
+
+  .progress-arrow {
+    max-width: 25vw;
+    margin: 20px auto;
+  }
+
+  .progress-arrow-active {
+    max-width: 25vw;
+    margin: 20px auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .progress-arrow {
+    max-width: 20vw;
+    margin: 20px auto;
+  }
+
+  .progress-arrow-active {
+    max-width: 20vw;
+    margin: 20px auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .progress-arrow {
+    max-width: 15vw;
+    margin: 20px auto;
+  }
+
+  .progress-arrow-active {
+    max-width: 18vw;
+    margin: 20px auto;
+  }
 }

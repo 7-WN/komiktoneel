@@ -45,6 +45,19 @@
 
 ?>
 <div class="container">
+    <section class="row">
+        <figure class="progress-margin">
+            <a href="./reserveren.php">
+                <img src="./images/arrow-1-light.png" alt="Pijtljes" class="progress-arrow">
+            </a>
+            <a href="./reserveren-gegevens.php">
+                <img src="./images/arrow-2-light.png" alt="Pijtljes" class="progress-arrow">
+            </a>
+            <a href="./reserveren-overzicht.php">
+                <img src="./images/arrow-3-dark.png" alt="Pijtljes" class="progress-arrow-active">
+            </a>
+        </figure>
+    </section>
     <h1 class="my-5">Uw reservatie</h1>
     <p>Gelieve onderstaande gegevens nog eens na te kijken. Als deze kloppen, kan u een betalingsmethode kiezen.</p>
     <ul>
@@ -54,7 +67,8 @@
         <li><b>Telefoon: </b><?= $tel ?></li>
     </ul>
     <a href="reserveren-gegevens.php">Uw gegevens aanpassen</a>
-    <p class="mt-5">U reserveert voor <b><?= $aantal ?></b> personen op <b><?= date("l jS F", strtotime($dag["dag"])) ?></b>. 
+    <p class="mt-5">U reserveert voor <b><?= $aantal ?></b> personen op
+        <b><?= date("l jS F", strtotime($dag["dag"])) ?></b>.
         De voorstelling begint om <b><?= date("G:i", strtotime($dag["dag"])) ?>u.</b></p>
     <a href="reserveren.php">Aantal of datum aanpassen</a>
     <p class="my-5 text-center display-4 ">€ <?= number_format($prijsPerTicket * $aantal, 2) ?></p>
