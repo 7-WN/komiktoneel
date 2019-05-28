@@ -63,9 +63,9 @@
             <button type="button" class="button buttonreverse col-4 betaling-keuze-button" id="overschrijvingKnop">Overschrijving</button>
             <button type="button" class="button buttonreverse betaling-keuze-button col-4 offset-4" id="terPlaatseKnop">Ik betaal ter plaatse</button>
         </div>
-        <input type="radio" class="d-none" name="betalingswijze" value="overschrijving" id="overschrijvingKeuze">
-        <input type="radio" class="d-none" name="betalingswijze" value="terplaatse" id="terPlaatseKeuze">
-        <button type="submit" class="button my-5">Betalen</button>
+        <input type="radio" class="d-none" name="betalingsWijze" value="overschrijving" id="overschrijvingKeuze">
+        <input type="radio" class="d-none" name="betalingsWijze" value="terplaatse" id="terPlaatseKeuze">
+        <button type="submit" name="submit" class="button my-5">Betalen</button>
     </form>
 </div>
 
