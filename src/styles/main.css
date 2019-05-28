@@ -348,6 +348,20 @@ iframe {
 
 .progress {
   padding: 0;
+  float: right;
+  border-radius: 0;
+  border: 1px solid #141414;
+  background-color: white;
+  height: 1.5rem;
+}
+
+input[type="radio"] {
+  -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+  -moz-appearance: checkbox; /* Firefox */
+  -ms-appearance: checkbox; /* not currently supported */
+  content: "14";
+  transform: scale(1.5);
+  border: 4px solid #3195a6;
 }
 
 /*Arrows*/
