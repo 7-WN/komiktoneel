@@ -28,10 +28,22 @@
 ?>
 
 <main class="container">
+    <section class="row">
+        <figure class="progress-margin">
+            <a href="./reserveren.php">
+                <img src="./images/arrow-1-light.png" alt="Pijtljes" class="progress-arrow">
+            </a>
+            <a href="./reserveren-gegevens.php">
+                <img src="./images/arrow-2-dark.png" alt="Pijtljes" class="progress-arrow-active">
+            </a>
+            <img src="./images/arrow-3-light.png" alt="Pijtljes" class="progress-arrow">
+        </figure>
+    </section>
     <article class="lead">
         <h2> U gaat reserveren voor <?= $aantal ?> personen op <?= date("l jS F", strtotime($dag["dag"])) ?>.</h2>
         <a href="reserveren.php">Klik hier om dit aan te passen.</a>
-        <p class="mb-5 mt-2">Vul hier uw gegevens in om de reservatie te vervolledigen. Voor meer info over het gebruik
+        <p class="mb-5 mt-2">Vul hier uw gegevens in om de reservatie te vervolledigen. Voor meer info over het
+            gebruik
             van
             uw gegevens, bekijk ons
             <a href="privacy.php">privacy-beleid</a>.

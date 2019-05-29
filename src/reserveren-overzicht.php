@@ -45,6 +45,19 @@
 
 ?>
 <div class="container">
+    <section class="row">
+        <figure class="progress-margin">
+            <a href="./reserveren.php">
+                <img src="./images/arrow-1-light.png" alt="Pijtljes" class="progress-arrow">
+            </a>
+            <a href="./reserveren-gegevens.php">
+                <img src="./images/arrow-2-light.png" alt="Pijtljes" class="progress-arrow">
+            </a>
+            <a href="./reserveren-overzicht.php">
+                <img src="./images/arrow-3-dark.png" alt="Pijtljes" class="progress-arrow-active">
+            </a>
+        </figure>
+    </section>
     <h1 class="my-5">Uw reservatie</h1>
     <form action="php/stuur-reservatie.php" method="POST" class="form">
         <p>Gelieve onderstaande gegevens nog eens na te kijken. Als deze kloppen, kan u een betalingsmethode kiezen.</p>

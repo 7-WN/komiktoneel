@@ -35,76 +35,67 @@
 <?php $title = "Reserveren"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
 <div class="container">
-    <main class="container">
-        <section class="row">
-            <div class="arrow-dark col-3">
-                <p class="arrow-text-active">
-                    Datum
-                </p>
-            </div>
-            <div class="arrow-light col-3">
-                <p class="arrow-text-inactive">
-                    Gegevens
-                </p>
-            </div>
-            <div class="arrow-light col-3">
-                <p class="arrow-text-inactive">
-                    Betaling
-                </p>
-            </div>
-        </section>
-        <span style="text-align:justify">
-            <p> Denk eraan: eerst besteld is eerst gesteld. Vroegere reservaties worden
-                dichter tegen
-                het podium geplaatst.
-                We kunnen hier geen uitzonderingen in maken.
-            </p>
-        </span>
+    <section class="row">
+        <figure class="progress-margin">
+            <a href="./reserveren.php">
+                <img src="./images/arrow-1-dark.png" alt="Pijtljes" class="progress-arrow-active">
+            </a>
+            <img src="./images/arrow-2-light.png" alt="Pijtljes" class="progress-arrow">
+            <img src="./images/arrow-3-light.png" alt="Pijtljes" class="progress-arrow">
+        </figure>
+    </section>
+    <span style="text-align:justify">
+        <p> Denk eraan: eerst besteld is eerst gesteld. Vroegere reservaties worden
+            dichter tegen
+            het podium geplaatst.
+            We kunnen hier geen uitzonderingen in maken.
+        </p>
+    </span>
 
-        <form class="form" action="./reserveren-gegevens.php" method="POST">
-            <?php if($stukResult){ 
+    <form class="form" action="./reserveren-gegevens.php" method="POST">
+        <?php if($stukResult){ 
       /*HAAL STUK UIT DATABASE DAT ACTIEF STAAT*/
       while($stuk = mysqli_fetch_assoc($stukResult)){
         /* HAAL ALLE DAGEN VAN DAT STUK UIT DB */
         $dagenStatement = "SELECT dag_id, dag FROM dagen INNER JOIN stukken ON dagen.stuk_id = stukken.stuk_id WHERE stukken.stuk_id =" . $stuk['stuk_id'];
         $dagenResult = mysqli_query($con, $dagenStatement); ?>
-            <h2>Uw reservatie voor <?= $stuk['titel'] ?></h2>
-            <p>Dagen:</p>
-            <?php while($dag = mysqli_fetch_assoc($dagenResult)){
+        <h2>Uw reservatie voor <?= $stuk['titel'] ?></h2>
+        <p>Dagen:</p>
+        <?php while($dag = mysqli_fetch_assoc($dagenResult)){
                     $dagAantalStatement = "SELECT SUM(aantal) AS 'totaalAantal' FROM reservaties WHERE dag_id=" . $dag["dag_id"]; 
                     $dagAantalResult = mysqli_query($con, $dagAantalStatement);
                     $dagAantal = mysqli_fetch_assoc($dagAantalResult);
                     $dagPercent = 100 * ($dagAantal['totaalAantal'] / $maxAantal) ?>
-            <div class="form-row">
-                <div class="form-group col-12">
-                    <span class="progress-label">
-                        <input class="mr-3" type="radio" name="dag" value=<?= $dag["dag_id"] ?> <?php if(isset($dagKeuze) || isset($_SESSION['dagkeuze'])) { 
+        <div class="form-row">
+            <div class="form-group col-12">
+                <span class="progress-label">
+                    <input class="mr-3" type="radio" name="dag" value=<?= $dag["dag_id"] ?> <?php if(isset($dagKeuze) || isset($_SESSION['dagkeuze'])) { 
                             echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ;
                         } ?> required />
-                        <?= date("jS F, G:i", strtotime($dag["dag"])) ?>u
-                    </span>
-                    <div class="progress col-6">
-                        <div class="progress-bar" role="progressbar" style="<?= "width: " . $dagPercent . "%;" ?>"
-                            aria-valuenow=<?= $dagAantal['totaalAantal'] ?> aria-valuemin="0"
-                            aria-valuemax=<?= $maxAantal ?>>
-                            <?= floor($dagPercent) ?>%
-                        </div>
+                    <?= date("l jS F, G:i", strtotime($dag["dag"])) ?>u
+                </span>
+                <div class="progress col-12 col-md-6">
+                    <div class="progress-bar" role="progressbar" style="<?= "width: " . $dagPercent . "%;" ?>"
+                        aria-valuenow=<?= $dagAantal['totaalAantal'] ?> aria-valuemin="0"
+                        aria-valuemax=<?= $maxAantal ?>>
+                        <?= floor($dagPercent) ?>%
                     </div>
                 </div>
             </div>
-            <?php } ?>
-            <br />
-            <div class="row">
-                <div class="form-group offset-md-4 col-4">
-                    <h3>Aantal plaatsen</h3>
-                    <input class="col-1 form-control" type="number" name="aantal" min="1"
-                        value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" required />
-                    <button name="submit" type="submit" class="button">Volgende stap</button>
-                </div>
-            </div>
-            <?php }} else /* if($stukResult) */ { ?>
-            Reservaties zijn momenteel niet open
-            <?php } ?>
-        </form>
+        </div>
+        <?php } ?>
+        <br />
+        <div class="form-group row">
+            <article class="offset-md-5 col-xs-2">
+                <h3>Aantal plaatsen</h3>
+                <input class="form-control input-aantal" max-length="8" type="number" name="aantal" min="1"
+                    value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" required />
+                <button name="submit" type="submit" class="button btn-next">Volgende stap</button>
+            </article>
+        </div>
+        <?php }} else /* if($stukResult) */ { ?>
+        Reservaties zijn momenteel niet open
+        <?php } ?>
+    </form>
 </div>
 <?php include 'components/foot.php' ?>
