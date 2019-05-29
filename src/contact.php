@@ -52,6 +52,7 @@
                 <ul class="contact-info">
                     <li> Renilde Op de Beeck</li>
                     <li> <a href="tel:0032497496396"> +32 (0)497 49 63 96</a></li>
+                    <li>(tussen 16u en 19u)</li>
                     <ul>
             </article>
             <article class="contact-padding col-sm-12 col-md-6 col-xl-3">
@@ -73,11 +74,11 @@
                 </iframe>
             </article>
             <article class="contact-plaats col-12 col-xl-3">
-                <p>Dit jaar spelen we weer in de arochiezaal van Oelegem:</p>
+                <p>Dit jaar spelen we weer in de Parochiezaal van Oelegem:</p>
                 <p>Venusstraat 10, 2520 Oelegem</p>
                 <p>Er zijn 60 parkeerplaatsen beschikbaar.
                     Er is een fietsenstalling aanwezig.
-                    De zaal is rolstoeltoegankelijk, gelieve ons te contacteren indien u met een rolstoel komt.
+                    De zaal is rolstoeltoegankelijk, gelieve ons te contacteren indien u met een rolstoel komt kijken.
                 </p>
             </article>
         </div>

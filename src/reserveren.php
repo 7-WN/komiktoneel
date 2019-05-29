@@ -89,7 +89,7 @@
             <article class="offset-md-5 col-xs-2">
                 <h3>Aantal plaatsen</h3>
                 <input class="form-control input-aantal" max-length="8" type="number" name="aantal" min="1"
-                    value="<?= isset($aantalKeuze) ? $aantalKeuze : 0 ?>" required />
+                    value="<?= isset($aantalKeuze) ? $aantalKeuze : "" ?>" required />
                 <button name="submit" type="submit" class="button btn-next">Volgende stap</button>
             </article>
         </div>

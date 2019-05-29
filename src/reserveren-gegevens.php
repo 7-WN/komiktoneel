@@ -40,8 +40,8 @@
         </figure>
     </section>
     <article class="lead">
-        <h2> U gaat reserveren voor <?= $aantal ?> personen op <?= date("l jS F", strtotime($dag["dag"])) ?>.</h2>
-        <a href="reserveren.php">Klik hier om dit aan te passen.</a>
+        <h3> U gaat reserveren voor <?= $aantal ?> personen op <?= date("l jS F", strtotime($dag["dag"])) ?>.</h3>
+        <a class="blauwe-link" href="reserveren.php">Klik hier om dit aan te passen.</a>
         <p class="mb-5 mt-2">Vul hier uw gegevens in om de reservatie te vervolledigen. Voor meer info over het
             gebruik
             van

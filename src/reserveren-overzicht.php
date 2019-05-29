@@ -48,17 +48,17 @@
     <section class="row">
         <figure class="progress-margin">
             <a href="./reserveren.php">
-                <img src="./images/arrow-1-light.png" alt="Pijtljes" class="progress-arrow">
+                <img src="./images/arrow-1-light.png" alt="Pijltjes" class="progress-arrow">
             </a>
             <a href="./reserveren-gegevens.php">
-                <img src="./images/arrow-2-light.png" alt="Pijtljes" class="progress-arrow">
+                <img src="./images/arrow-2-light.png" alt="Pijltjes" class="progress-arrow">
             </a>
             <a href="./reserveren-overzicht.php">
-                <img src="./images/arrow-3-dark.png" alt="Pijtljes" class="progress-arrow-active">
+                <img src="./images/arrow-3-dark.png" alt="Pijltjes" class="progress-arrow-active">
             </a>
         </figure>
     </section>
-    <h1 class="my-5">Uw reservatie</h1>
+    <h2 class="mb-5">Uw reservatie</h2>
     <form action="php/stuur-reservatie.php" method="POST" class="form">
         <p>Gelieve onderstaande gegevens nog eens na te kijken. Als deze kloppen, kan u een betalingsmethode kiezen.</p>
         <ul>
@@ -67,18 +67,18 @@
             <li><b>E-mail: </b><?= $email ?></li>
             <li><b>Telefoon: </b><?= $tel ?></li>
         </ul>
-        <a href="reserveren-gegevens.php">Uw gegevens aanpassen</a>
+        <a class="blauwe-link" href="reserveren-gegevens.php">Uw gegevens aanpassen</a>
         <p class="mt-5">U reserveert voor <b><?= $aantal ?></b> personen op <b><?= date("l jS F", strtotime($dag["dag"])) ?></b>. 
             De voorstelling begint om <b><?= date("G:i", strtotime($dag["dag"])) ?>u.</b></p>
-        <a href="reserveren.php">Aantal of datum aanpassen</a>
-        <p class="my-5 text-center display-4 ">€ <?= number_format($prijsPerTicket * $aantal, 2) ?></p>
-        <div class="row">
+        <a class="blauwe-link" href="reserveren.php">Aantal of datum aanpassen</a>
+        <p class="my-5 text-center display-4">€ <?= number_format($prijsPerTicket * $aantal, 2) ?></p>
+        <div class="row mb-5">
             <button type="button" class="button buttonreverse col-4 betaling-keuze-button" id="overschrijvingKnop">Overschrijving</button>
             <button type="button" class="button buttonreverse betaling-keuze-button col-4 offset-4" id="terPlaatseKnop">Ik betaal ter plaatse</button>
         </div>
         <input type="radio" class="d-none" name="betalingsWijze" value="overschrijving" id="overschrijvingKeuze">
         <input type="radio" class="d-none" name="betalingsWijze" value="terplaatse" id="terPlaatseKeuze">
-        <button type="submit" name="submit" class="button my-5">Betalen</button>
+        <button type="submit" name="submit" class="button my-5 col-2 offset-5">Betalen</button>
     </form>
 </div>
 
