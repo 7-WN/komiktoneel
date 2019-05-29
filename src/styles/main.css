@@ -105,11 +105,20 @@ a {
 .nav-link {
   color: #f3f2e3 !important;
   padding-bottom: 1px;
+  width: max-content;
+  margin: 0.5rem 0.5rem;
 }
 
 .nav-link:hover {
   border-bottom: 1px solid #f3f2e3;
   padding-bottom: 0px;
+}
+
+/*padding veranderd in margin zodat onderlijning mooit uitkomt*/
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0rem;
+  padding-left: 0rem;
 }
 
 /* Hero-image hoofdpagina */
@@ -253,20 +262,20 @@ label {
 
 /* VOORSTELLINGEN */
 .stuk-row {
-  height: 400px;
+  height: max-content;
 }
 
 .stuk-tekst .links {
-  text-align: right;
+  text-align: justify;
 }
 
 .stuk-desc {
   overflow: hidden;
+  text-align: justify;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10; /* number of lines to show */
-  line-height: 1; /* fallback */
   max-height: 1 * 10; /* fallback */
 }
 
@@ -277,8 +286,19 @@ label {
 .stuk-flyer {
   max-height: 350px;
   width: 100%;
+  margin: 60px 0px;
 }
 
+.button-stuk {
+  border: none;
+  outline: 0;
+  padding: 10px 25px;
+  color: #f3f2e3;
+  background-color: #3195a6;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px 0 40px;
+}
 /* SPONSORS */
 .sponsor-card {
   padding: 0;
@@ -534,6 +554,11 @@ input[type="radio"] {
     height: 350px;
     width: 350px;
   }
+  .stuk-titel {
+    color: #5d0a17;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+  }
 }
 
 /*Small devices (landscape phones, 576px and up) */
@@ -561,6 +586,11 @@ input[type="radio"] {
     height: 500px;
     width: 500px;
   }
+  .stuk-titel {
+    color: #5d0a17;
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -578,6 +608,12 @@ input[type="radio"] {
     height: 500px;
     width: 600px;
   }
+
+  .stuk-titel {
+    color: #5d0a17;
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -594,5 +630,10 @@ input[type="radio"] {
   iframe {
     height: 500px;
     width: 700px;
+  }
+  .stuk-titel {
+    color: #5d0a17;
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
   }
 }
