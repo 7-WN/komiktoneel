@@ -3,7 +3,6 @@
   session_start();
   include 'dbconfig.php';
 
-  // DATA OPHALEN
   if(isset($_POST['submit'])){
     $voornaam = $_SESSION['voornaam'];
     $achternaam = $_SESSION['achternaam'];
@@ -20,9 +19,9 @@
       $postcode = $_SESSION['postcode'];
       $plaats = $_SESSION['plaats'];
     } else {
-      $straat = "NULL";
-      $postcode = "NULL";
-      $plaats = "NULL";
+      $straat = null;
+      $postcode = null;
+      $plaats = null;
     }
 
     $statement = 
@@ -43,12 +42,17 @@
 
       $result = mysqli_query($con, $statement);
 
+      session_destroy();
+      session_start();
+      $_SESSION['reservatie_gemaakt'] = true;
+
       if($betalingsWijze === "terplaatse"){
         header("Location: ../bevestiging-terplaatse.php");
       } elseif ($betalingsWijze === "overschrijving") {
         header("Location: ../bevestiging-overschrijving.php");
       }
+  
 
   } else {
-    echo "no submit seen";
+    header("Location: ../reserveren.php");
   }

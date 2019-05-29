@@ -1,19 +1,38 @@
 <?php 
+
     $title = "Reservatie bevestigd!";
     include('./components/head.php');
     include('./components/header.php');
+
+    include "./php/dbconfig.php";
+
+    if($_SESSION['reservatie_gemaakt']){
+        $statement = "SELECT * FROM reservaties ORDER BY res_id DESC LIMIT 1";
+        $result = mysqli_query($con, $statement);
+        $res = mysqli_fetch_assoc($result);
+
+        $dagStatement = "SELECT dag FROM dagen WHERE dag_id=" . $res['dag_id'];
+        $dagResult = mysqli_query($con, $dagStatement);
+        $dag = mysqli_fetch_assoc($dagResult);
+    } else {
+        header("Location: ./reserveren.php");
+    }
+
 ?>
 <div class="container">
     <h2>Bedankt voor uw reservatie!</h2>
-    <h3 class="mt-5">Overzicht van uw reservatie #<?= "144" ?>:</h3>
+    <h3 class="mt-5">Overzicht van uw reservatie #<?= $res['res_id'] ?>:</h3>
     <ul>
-        <li><?= "4" ?> personen op <?= "Zaterdag 9 februari" ?></li>
-        <li>Naam: <?= "Op de Beeck" . " " .  "Jesse" ?></li>
-        <li>Adres: <?= "Ranstsesteenweg" . " " . "173" . ", " . "2520" . " " . "Ranst" ?></li>
-        <li>E-mail: <?= "jesseodb@hotmail.com" ?></li>
-        <li>Telefoon: <?= "03 475 12 59" ?></li>
+        <li><?= $res['aantal'] ?> personen op <?= date("l jS F", strtotime($dag["dag"])) ?></li>
+        <li>Naam: <?= $res['voornaam'] . " " .  $res['achternaam'] ?></li>
+        <li>Adres: <?= $res['straat'] !== null ? 
+            $res['straat'] . ", " . $res['postcode'] . " " . $res['stad'] 
+            : "Geen adres opgegeven" ?></li>
+        <li>E-mail: <?= $res['email'] ?></li>
+        <li>Telefoon: <?= $res['telefoon'] ?></li>
     </ul>
-    <p>Gelieve het bedrag van <b>€ <?= "34,00" ?></b> aan de kassa te betalen. <br> Kaarten moeten ten minste vijftien minuten voor aanvang van de voorstelling afgehaald worden.</p>
+    <p>Gelieve het bedrag van <b>€ <?= number_format($res['aantal'] * $prijsPerTicket, 2) ?></b> aan de kassa te betalen. <br> Kaarten moeten ten minste vijftien minuten voor aanvang van de voorstelling afgehaald worden.</p>
+    <button class="button col-2 offset-5">Afdrukken</button>
 </div>
 <?php
 include('./components/foot.php');

@@ -491,8 +491,8 @@ input[type="radio"] {
 .progress-margin {
   margin: 4% auto 7%;
 }
-/*album*/
 
+/*album*/
 .gallery-title {
   font-size: 36px;
   color: #42b32f;
@@ -536,6 +536,11 @@ input[type="radio"] {
 
 .gallery_product {
   margin-bottom: 30px;
+}
+
+.overschrijving-gegevens > li,
+.overschrijving-gegevens > li > b {
+  font-size: 1.4rem;
 }
 
 /*Media queries */
