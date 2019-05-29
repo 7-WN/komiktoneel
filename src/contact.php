@@ -31,7 +31,7 @@
         </form>
 
         <div class="row">
-            <article class="col-sm-12 col-md-6 col-xl-3 info">
+            <article class="contact-padding col-sm-12 col-md-6 col-xl-3">
                 <h4>Komik Toneel VZW</h4>
                 <ul class="contact-info">
                     <li>komik@telenet.be</li>
@@ -40,21 +40,21 @@
                     <li>BE0820233483</li>
                     <ul>
             </article>
-            <article class="col-sm-12 col-md-6 col-xl-3 info">
+            <article class="contact-padding col-sm-12 col-md-6 col-xl-3">
                 <h4>Voorzitter</h4>
                 <ul class="contact-info">
                     <li>Jeroen Beckers</li>
                     <li><a href="tel:0032497550923">+32 (0)497 55 09 23</a></li>
                     <ul>
             </article>
-            <article class="col-sm-12 col-md-6 col-xl-3 info">
+            <article class="contact-padding col-sm-12 col-md-6 col-xl-3">
                 <h4>Reservaties</h4>
                 <ul class="contact-info">
                     <li> Renilde Op de Beeck</li>
                     <li> <a href="tel:0032497496396"> +32 (0)497 49 63 96</a></li>
                     <ul>
             </article>
-            <article class="col-sm-12 col-md-6 col-xl-3 info">
+            <article class="contact-padding col-sm-12 col-md-6 col-xl-3">
                 <h4>Website</h4>
                 <ul class="contact-info">
                     <li>Jesse Op de Beeck</li>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="row">
-            <article class="col-12 col-xl-9">
+            <article class="contact-padding col-12 col-xl-9">
                 <h3>De zaal bereiken</h3>
                 <iframe width="100%" height="600"
                     src="https://maps.google.com/maps?width=100%&height=600&hl=nl&q=Venusstraat%2010%2C%20250%20Oelegem+(Parochiezaal)&ie=UTF8&t=&z=15&iwloc=B&output=embed"

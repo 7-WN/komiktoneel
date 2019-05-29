@@ -17,4 +17,5 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto" rel="stylesheet" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 </head>
+
 <body>

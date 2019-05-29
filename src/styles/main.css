@@ -349,6 +349,10 @@ iframe {
   padding-top: 50px;
   text-align: justify;
 }
+
+.contact-padding {
+  padding-left: 0px;
+}
 /*Reservatieformulier */
 .progress-label {
   float: left;
