@@ -342,7 +342,7 @@ label {
 
 .footer-txt {
   display: inline-block;
-  margin: 20px 0px;
+  margin: 20px 0px 0px;
 }
 /*margin ul bij footer*/
 footer > nav > ul {
