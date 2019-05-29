@@ -73,4 +73,23 @@ $(document).ready(function() {
     input.attr("checked", "checked");
     andereInput.removeAttr("checked");
   });
+
+  // WANNEER KLIK OP EEN DAG IN RES.DATUM
+  $(".een-dag").click(function() {
+    // CHECK DE BOX
+    var inputBox = $(this).find("#dagInputBox");
+    inputBox.prop("checked", "checked");
+
+    // CHECK OF ER AL EEN DAG GESELECTEERD IS EN VERWIJDER SELECTIE
+    var alleDagen = $(".een-dag");
+    var i;
+    for (i = 0; i < alleDagen.length; i++) {
+      if (alleDagen[i].classList.contains("gekozen-dag")) {
+        alleDagen[i].classList.remove("gekozen-dag");
+      }
+    }
+
+    // VOEG GRIJZE ACHTERGROND TOE
+    $(this).addClass("gekozen-dag");
+  });
 });

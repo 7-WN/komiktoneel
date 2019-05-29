@@ -67,9 +67,9 @@
                     $dagAantal = mysqli_fetch_assoc($dagAantalResult);
                     $dagPercent = 100 * ($dagAantal['totaalAantal'] / $maxAantal) ?>
         <div class="form-row">
-            <div class="form-group col-12">
+            <div class="form-group col-12 een-dag <?php if(isset($dagKeuze) && $dagKeuze === $dag['dag_id']){ echo "gekozen-dag"; } ?>">
                 <span class="progress-label">
-                    <input class="mr-3" type="radio" name="dag" value=<?= $dag["dag_id"] ?> <?php if(isset($dagKeuze) || isset($_SESSION['dagkeuze'])) { 
+                    <input class="mr-3" id="dagInputBox" type="radio" name="dag" value=<?= $dag["dag_id"] ?> <?php if(isset($dagKeuze) || isset($_SESSION['dagkeuze'])) { 
                             echo $dagKeuze === $dag["dag_id"] ? "checked" : "" ;
                         } ?> required />
                     <?= date("l jS F, G:i", strtotime($dag["dag"])) ?>u

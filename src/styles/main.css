@@ -382,7 +382,21 @@ iframe {
 .contact-padding {
   padding-left: 0px;
 }
+
 /*Reservatieformulier */
+.een-dag {
+  padding: 10px 0px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+.gekozen-dag {
+  background-color: lightgrey;
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
 .progress-label {
   float: left;
 }
