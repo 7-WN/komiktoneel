@@ -14,14 +14,14 @@
 
     $betalingsWijze = $_POST['betalingsWijze'];
 
-    if(isset($_SESSION['straat']) && isset($_SESSION['postcode']) && isset($_SESSION['plaats'])){
+    if(!empty($_SESSION['straat']) && !empty($_SESSION['postcode']) && !empty($_SESSION['plaats'])){
       $straat = $_SESSION['straat'];
       $postcode = $_SESSION['postcode'];
       $plaats = $_SESSION['plaats'];
     } else {
-      $straat = null;
-      $postcode = null;
-      $plaats = null;
+      $straat = 0;
+      $postcode = 0;
+      $plaats = 0;
     }
 
     $statement = 
@@ -40,19 +40,19 @@
         . $extra . "')"
       ;
 
-      $result = mysqli_query($con, $statement);
+      $_SESSION['res_gemaakt'] = true;
 
-      session_destroy();
-      session_start();
-      $_SESSION['reservatie_gemaakt'] = true;
-
-      if($betalingsWijze === "terplaatse"){
-        header("Location: ../bevestiging-terplaatse.php");
-      } elseif ($betalingsWijze === "overschrijving") {
-        header("Location: ../bevestiging-overschrijving.php");
+      if($result = mysqli_query($con, $statement)){
+        if($betalingsWijze === "terplaatse"){
+          header("Location: ../bevestiging-terplaatse.php");
+        } elseif ($betalingsWijze === "overschrijving") {
+          header("Location: ../bevestiging-overschrijving.php");
+        }
+      } else {
+        echo "Er ging iets fout: kijk na of alle nodige gegevens zijn ingevuld en probeer opnieuw. \n" 
+        . mysqli_error($con);
+        var_dump($statement);
       }
-  
-
   } else {
     header("Location: ../reserveren.php");
   }
