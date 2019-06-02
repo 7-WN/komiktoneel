@@ -308,6 +308,11 @@ label {
   cursor: pointer;
   margin: 20px 0 40px;
 }
+
+.button-stuk:visited {
+  color: #f3f2e3;
+}
+
 /* SPONSORS */
 .sponsor-card {
   padding: 0;
