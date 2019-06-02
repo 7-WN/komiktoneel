@@ -92,4 +92,22 @@ $(document).ready(function() {
     // VOEG GRIJZE ACHTERGROND TOE
     $(this).addClass("gekozen-dag");
   });
+
+  // KLEUREN VAN PROGRESS BARS
+  var progressBars = $(".dagProgressBar");
+  var i;
+
+  for (i = 0; i < progressBars.length; i++) {
+    var currentProgress = progressBars[i].getAttribute("aria-valuenow");
+    var maxProgress = progressBars[i].getAttribute("aria-valuemax");
+
+    if (currentProgress >= maxProgress * 0.8) {
+      progressBars[i].style.backgroundColor = "#F26638";
+    }
+
+    if (currentProgress >= maxProgress * 1) {
+      progressBars[i].style.backgroundColor = "#DF222A";
+      // disable checkbox
+    }
+  }
 });

@@ -75,8 +75,10 @@
                     <?= date("l jS F, G:i", strtotime($dag["dag"])) ?>u
                 </span>
                 <div class="progress col-12 col-md-6">
-                    <div class="progress-bar" role="progressbar" style="<?= "width: " . $dagPercent . "%;" ?>"
-                        aria-valuenow=<?= $dagAantal['totaalAantal'] ?> aria-valuemin="0"
+                    <div class="progress-bar dagProgressBar" role="progressbar"
+                        style="<?= "width: " . $dagPercent . "%;" ?>"
+                        aria-valuenow=<?= $dagAantal['totaalAantal'] ?> 
+                        aria-valuemin="0"
                         aria-valuemax=<?= $maxAantal ?>>
                         <?= floor($dagPercent) ?>%
                     </div>
