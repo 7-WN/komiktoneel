@@ -3,6 +3,9 @@
     <nav class="footer-nav">
         <ul>
             <li class="footer-txt">
+                <a href="./php/stuur-mails.php" class="nav-item nav-link">Mails</a>
+            </li>
+            <li class="footer-txt">
                 <a href="./php/destroysession.php" class="nav-item nav-link">Sessie KAPUT</a>
             </li>
             <li class="footer-txt">
