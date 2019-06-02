@@ -32,8 +32,10 @@
         $tel = $_SESSION['telefoon'];
         $extra = $_SESSION['extra'];
 
-        if(isset($_SESSION['straat']) && isset($_SESSION['postcode']) && isset($_SESSION['plaats'])){
+        if($_SESSION['straat'] != null && $_SESSION['postcode'] != null && $_SESSION['plaats'] != null){
             $adres = $_SESSION['straat'] . ", " . $_SESSION['postcode'] . " " . $_SESSION['plaats'];
+        } else {
+            $adres = null;
         }
     } else {
         header("Location: reserveren.php");
@@ -63,7 +65,12 @@
         <p>Gelieve onderstaande gegevens nog eens na te kijken. Als deze kloppen, kan u een betalingsmethode kiezen.</p>
         <ul>
             <li><b>Naam: </b><?= $naam ?></li>
-            <li><b>Adres: </b><?php echo $adres === null ? $adres : "<u>Geen adres opgegeven</u>" ?></li>
+            <li><b>Adres: </b>
+            <?php if($adres != null){ 
+                echo $adres;
+            } else {
+                echo "Geen adres opgegeven";
+            } ?></li>
             <li><b>E-mail: </b><?= $email ?></li>
             <li><b>Telefoon: </b><?= $tel ?></li>
         </ul>
