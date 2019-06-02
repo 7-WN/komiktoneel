@@ -402,6 +402,15 @@ iframe {
   transition-timing-function: linear;
 }
 
+.volgeboekt {
+  /*display: none; */
+  color: lightgrey;
+}
+
+.volgeboekt .progressBar {
+  opacity: 50%;
+}
+
 .progress-label {
   float: left;
 }

@@ -76,26 +76,33 @@ $(document).ready(function() {
 
   // WANNEER KLIK OP EEN DAG IN RES.DATUM
   $(".een-dag").click(function() {
-    // CHECK DE BOX
     var inputBox = $(this).find("#dagInputBox");
-    inputBox.prop("checked", "checked");
-
-    // CHECK OF ER AL EEN DAG GESELECTEERD IS EN VERWIJDER SELECTIE
-    var alleDagen = $(".een-dag");
-    var i;
-    for (i = 0; i < alleDagen.length; i++) {
-      if (alleDagen[i].classList.contains("gekozen-dag")) {
-        alleDagen[i].classList.remove("gekozen-dag");
+    if (!inputBox.prop("disabled")) {
+      var alleDagen = $(".een-dag");
+      var i;
+      for (i = 0; i < alleDagen.length; i++) {
+        if (alleDagen[i].classList.contains("gekozen-dag")) {
+          alleDagen[i].classList.remove("gekozen-dag");
+        }
       }
+      inputBox.prop("checked", "checked");
+      $(this).addClass("gekozen-dag");
     }
-
-    // VOEG GRIJZE ACHTERGROND TOE
-    $(this).addClass("gekozen-dag");
   });
 
   // KLEUREN VAN PROGRESS BARS
   var progressBars = $(".dagProgressBar");
   var i;
+
+  function disableDay(progressBar) {
+    var bar = progressBar;
+    var day = bar.parentElement.parentElement;
+    var input = day.querySelector("#dagInputBox");
+
+    day.classList.add("volgeboekt");
+    bar.innerHTML = "VOLZET";
+    input.setAttribute("disabled", "disabled");
+  }
 
   for (i = 0; i < progressBars.length; i++) {
     var currentProgress = progressBars[i].getAttribute("aria-valuenow");
@@ -107,7 +114,7 @@ $(document).ready(function() {
 
     if (currentProgress >= maxProgress * 1) {
       progressBars[i].style.backgroundColor = "#DF222A";
-      // disable checkbox
+      disableDay(progressBars[i]);
     }
   }
 });
