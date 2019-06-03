@@ -19,13 +19,13 @@
   <h2 class="mt-5">Het bestuur</h2>
   <?php while($row = mysqli_fetch_assoc($bestuurResult)){ ?>
     <div class="row my-5">
-        <div class="col-md-2">
+        <div class="col-lg-3 col-md-2">
           <a href="#">
             <img class="img-fluid rounded mb-3 mb-md-0 over-bestuurfoto" 
             src="<?= $row['image_path'] ?>" alt="Groepsfoto Komik Toneel">
           </a>
         </div>
-        <div class="col-md-10">
+        <div class="col-lg-/ col-md-10">
           <h3><?= $row['naam'] ?></h3>
           <span class="text-muted font-italic"><?= $row['functie'] ?></span>
           <p><?= $row['tekst'] ?></p>

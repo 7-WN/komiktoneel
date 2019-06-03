@@ -682,4 +682,8 @@ input[type="radio"] {
     font-family: "Playfair Display", serif;
     font-size: 3rem;
   }
+
+  .over-lidfoto {
+    height: 200px;
+  }
 }
