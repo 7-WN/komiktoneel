@@ -13,7 +13,7 @@
 <?php $title = "Over Komik"; include 'components/head.php' ?>
 <?php include 'components/header.php' ?>
 <div class="container">
-  <img src="http://placehold.it/1000x300" alt="Groepsfoto Komik toneel" class="img-fluid over-groepsfoto">
+  <img src="./images/over-groepsfoto.jpg" alt="Groepsfoto Komik toneel" class="img-fluid over-groepsfoto">
   <h1 class="my-5">Over Komik Toneel</h1>
   <p>Welkom bij Komik Toneel, een amateur toneelgezelschap voor en door mensen die graag lachen.</p>
   <h2 class="mt-5">Het bestuur</h2>
