@@ -33,14 +33,15 @@
       </div>
   <?php } ?>
   <h2 class="mt-5">Onze mensen</h2>
-  <?php while($row = mysqli_fetch_assoc($acteursResult)){ ?>
+  <?php while($row = mysqli_fetch_assoc($acteursResult)){
+    if($row['image_path'] != "./images/leden/leeg.png") { ?>
     <img src="<?= $row['image_path'] ?>" 
     alt="Foto acteur" 
     class="col-lg-2 col-md-3 col-sm-4 col-xs-6 my-5 over-lidfoto"
     data-toggle="tooltip"
     data-placement="right"
     title="<?= $row['naam'] ?>">
-  <?php } ?>
+  <?php }} ?>
   <h2 class="mt-5">Geschiedenis</h2>
   <p>Komik Toneel is ontstaan in het volleybal. Een aantal jeugdtrainers zochten een extra
     activiteit, en kwamen op het idee om een toneelstuk op te voeren. Na het zoeken van
