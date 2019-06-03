@@ -102,6 +102,7 @@ $(document).ready(function() {
     day.classList.add("volgeboekt");
     bar.innerHTML = "VOLZET";
     input.setAttribute("disabled", "disabled");
+    day.style.cursor = "default";
   }
 
   for (i = 0; i < progressBars.length; i++) {
