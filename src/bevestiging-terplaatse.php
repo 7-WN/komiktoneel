@@ -16,7 +16,7 @@
         $dagResult = mysqli_query($con, $dagStatement);
         $dag = mysqli_fetch_assoc($dagResult);
 
-        session_destroy();
+       session_destroy();
     } else {
         header("Location: ./reserveren.php");
     }
@@ -28,7 +28,7 @@
     <ul>
         <li><?= $res['aantal'] ?> personen op <?= date("l jS F", strtotime($dag["dag"])) ?></li>
         <li>Naam: <?= $res['voornaam'] . " " .  $res['achternaam'] ?></li>
-        <li>Adres: <?php if($res['straat'] != 0) {  
+        <li>Adres: <?php if($res['straat'] != null) {  
             echo $res['straat'] . ", " . $res['postcode'] . " " . $res['stad']; }
             else { echo "Geen adres opgegeven"; } ?></li>
         <li>E-mail: <?= $res['email'] ?></li>

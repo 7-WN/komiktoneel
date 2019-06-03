@@ -5,9 +5,6 @@
             <li class="footer-txt">
                 <a class="nav-item nav-link" href="./sponsors.php">Sponsors</a>
             </li>
-            <li class="footer-txt">
-                <a class="nav-item nav-link" href="./login.php">Login</a>
-            </li>
         </ul>
     </nav>
 </footer>
