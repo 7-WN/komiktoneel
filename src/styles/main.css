@@ -269,6 +269,10 @@ label {
   max-height: 200px;
 }
 
+.over-lidfoto {
+  height: 300px;
+}
+
 /* VOORSTELLINGEN */
 .stuk-row {
   height: max-content;
