@@ -10,6 +10,7 @@
   $resStukken = mysqli_query($con, $statementStukken);
 
 ?>
+
 <div class="container">
     <?php while($row = mysqli_fetch_assoc($resStukken)){ ?>
     <section class="row stuk-row">

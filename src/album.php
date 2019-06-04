@@ -2,15 +2,15 @@
 
 <?php include 'components/header.php'?>
 <main>
-<div class="container album">
-    <div class="row">
-        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h2>Gallerij</h2>
-        </div>
+    <div class="container album">
+        <div class="row">
+            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h2>Gallerij</h2>
+            </div>
 
-        <div class="row btnAlbum">
-            <button class="btn btn-default filter-button button" data-filter="all">Alles</button>
-            <?php
+            <div class="row btnAlbum">
+                <button class="btn btn-default filter-button button" data-filter="all">Alles</button>
+                <?php
             //aanmaken van een button adhv de directory naam
             $dirs = array_filter(glob("images/albums/*"),"is_dir");
                 foreach ($dirs as $dir){
@@ -20,12 +20,11 @@
                 }
 
                 ?>
+            </div>
         </div>
-    </div>
-    <div class="row">
+        <div class="row">
 
-    
-    <?php
+            <?php
                 //een foto met klasse plaatsen     
                 $dirs = array_filter(glob("images/albums/*"),"is_dir");
                 foreach ($dirs as $dir){
@@ -35,9 +34,8 @@
                         echo "<div class='imgAlbum col-lg-3 col-md-4 col-sm-4 col-xs-6 filter $map'> <a href='./$pic'> <img class='imgAlbum' src='./$pic'/> </a> </div>";
                     }
                 }
-
                 ?>
-    </div>      
-    
+        </div>
+
 </main>
 <?php include 'components/foot.php' ?>
