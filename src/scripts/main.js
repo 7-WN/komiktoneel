@@ -45,6 +45,7 @@ $(document).ready(function() {
   $(this).addClass("active");
 });
 
+
 // RESERVATIE OVERZICHT SELECTIE BETALING
 $(document).ready(function() {
   // OVERSCHRIJVING

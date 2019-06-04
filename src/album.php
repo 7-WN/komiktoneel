@@ -32,7 +32,7 @@
                     $map = ltrim(strstr($dir, "/"),"/albums/");
                     $pics = glob($dir."/*");
                     foreach($pics as $pic){
-                        echo "<div class='imgAlbum col-lg-3 col-md-4 col-sm-4 col-xs-6 filter $map'> <img class='imgAlbum' src='./$pic'/> </div>";
+                        echo "<div class='imgAlbum col-lg-3 col-md-4 col-sm-4 col-xs-6 filter $map'> <a href='./$pic'> <img class='imgAlbum' src='./$pic'/> </a> </div>";
                     }
                 }
 
