@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css)" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
     <link rel="stylesheet" href="./styles/main.css" />
 
     <!-- Google fonts -->

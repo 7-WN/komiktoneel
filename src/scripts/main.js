@@ -19,6 +19,7 @@ $(document).ready(function() {
   }
 });
 
+//foto's filteren
 $(document).ready(function() {
   $(".filter-button").click(function() {
     
@@ -45,6 +46,11 @@ $(document).ready(function() {
   $(this).addClass("active");
 });
 
+//lightbox
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
 
 // RESERVATIE OVERZICHT SELECTIE BETALING
 $(document).ready(function() {
