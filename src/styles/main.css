@@ -317,6 +317,49 @@ label {
   color: #f3f2e3;
 }
 
+.voorstelling-desc {
+  text-align: justify;
+}
+
+.voorstelling-tabel {
+  margin-top: 40px;
+}
+
+.voorstelling-rol {
+  text-align: right;
+}
+
+.voorstelling-als {
+  padding-left: 30px;
+}
+
+#regisseur {
+  text-align: right;
+}
+
+#schrijver {
+  text-align: right;
+}
+
+.voorstelling-album {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 10px 30px 10px 0px;
+  border: 1px solid grey;
+  background-color: lightgrey;
+}
+
+.voorstelling-button {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 100px;
+  max-height: 100px;
+  color: #f3f2e3;
+  background-color: #3195a6 !important;
+}
+
 /* SPONSORS */
 .sponsor-card {
   padding: 0;

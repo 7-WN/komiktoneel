@@ -18,7 +18,7 @@
             <?php if($row['stuk_id']%2) { ?>
             <h2 class="stuk-titel"><?= $row['titel'] ?></h2>
             <p class="stuk-desc"><?= $row['beschrijving'] ?></p>
-            <a href="./voorstelling.php?id=<?= $row['stuk_id'] ?>" class="button-stuk">Meer lezen</a>
+            <a href="./voorstelling.php?id=<?= $row['stuk_id'] ?>"><button class="button-stuk">Meer lezen</button></a>
             <?php } else { ?>
             <img class="stuk-flyer" src="<?= $row['flyer_path'] ?>" />
             <?php } ?>
@@ -30,7 +30,7 @@
             <?php } else { ?>
             <h2 class="stuk-titel"><?= $row['titel'] ?></h2>
             <p class="stuk-desc"><?= $row['beschrijving'] ?></p>
-            <a href="./voorstelling.php?id=<?= $row['stuk_id'] ?>" class="button-stuk">Meer lezen</a>
+            <a href="./voorstelling.php?id=<?= $row['stuk_id'] ?>"> <button class="button-stuk">Meer lezen </button></a>
             <?php } ?>
         </article>
         <div class="col-xl-1">

@@ -92,7 +92,7 @@
                 <input type="hidden" name="stuk" value="<?= $stuk['stuk_id'] ?>" />
                 <article class="offset-4 col-lg-4" id="reservatieknop">
                     <button href="./reserveren.php" type="submit" class="button btn-position buttonleft"
-                        value="Snel reserveren!" id="resknop"><span class="link">Snel reserveren</span></button>
+                        value="Snel reserveren!" id="resknop">Snel reserveren</button>
 
                 </article>
                 <article class="col-lg-4 txtalign" id="txtalign">
