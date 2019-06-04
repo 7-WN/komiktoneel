@@ -96,7 +96,6 @@
 
                 </article>
                 <article class="col-lg-4 txtalign" id="txtalign">
-
                     <button class="buttonreverse btn-position buttonright" id="btnmeer">
                         <a href="./voorstellingen.php" class="link">
                             Meer
@@ -105,7 +104,6 @@
                 </article>
             </div>
             </form>
-
         </section>
 </main>
 </div>

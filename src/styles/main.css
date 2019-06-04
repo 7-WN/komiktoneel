@@ -38,7 +38,7 @@ a:hover,
 a:visited,
 a {
   text-decoration: none;
-  color: #141414;
+  color: #f3f2e3;
 }
 
 .container {
@@ -352,12 +352,21 @@ label {
 }
 
 .voorstelling-button {
-  min-width: 200px;
-  max-width: 200px;
+  width: 200px;
   min-height: 100px;
   max-height: 100px;
   color: #f3f2e3;
   background-color: #3195a6 !important;
+  margin: 0px !important;
+}
+
+.container-box {
+  padding: 0px;
+  margin: 0px;
+}
+
+.margin-btn {
+  margin-top: 100px;
 }
 
 /* SPONSORS */
@@ -554,13 +563,11 @@ input[type="radio"] {
 }
 
 /*album*/
-.btnAlbum
-{
+.btnAlbum {
   margin-bottom: 20px;
 }
 
-.btn{
-
+.btn {
   margin-left: 5px;
 }
 
@@ -572,13 +579,13 @@ input[type="radio"] {
   margin-bottom: 30px;
 }
 
-.imgAlbum{
- height: 250px;
- width: 250px;
- padding-top: 50px;
+.imgAlbum {
+  height: 250px;
+  width: 250px;
+  padding-top: 50px;
 }
 
-.album{
+.album {
   padding-bottom: 50px;
 }
 

@@ -25,37 +25,39 @@
         <img src="<?= $stuk['flyer_path'] ?>" alt="Flyer stuk" class="col-12 col-lg-6">
         <article class="col-lg-6">
             <p class="voorstelling-desc"> <?php echo $stuk['beschrijving'] ?> </p>
-            <table class="voorstelling-tabel col-12">
-                <tr>
-                    <td> <strong> Regisseur <strong></td>
-                    <td id="regisseur"> <?= $stuk['regisseur']?> </td>
-                </tr>
-                <tr>
-                    <td><strong>Schrijver<strong></td>
-                    <td id="schrijver"><?= $stuk['schrijver']?> </td>
-                </tr>
-            </table>
         </article>
     </section>
 
     <section class="row">
         <article class="col-md-6">
-            <div class="form-inline voorstelling-tabel">
-                <div class="voorstelling-album"></div>
-                <div class="voorstelling-album"></div>
+            <div class="container container-box">
+                <div class="row">
+                    <table class="voorstelling-tabel col-12">
+                        <tr>
+                            <td> <strong> Regisseur <strong></td>
+                            <td id="regisseur"> <?= $stuk['regisseur']?> </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Schrijver<strong></td>
+                            <td id="schrijver"><?= $stuk['schrijver']?> </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row container-box margin-btn">
+                    <div class="col-6 container-box">
+                        <a href="./voorstellingen.php">
+                            <button class="btn voorstelling-button">Alle voorstellingen </button>
+                        </a>
+                    </div>
+                    <div class="col-6 container-box">
+                        <a href="./album.php">
+                            <button class="btn voorstelling-button float-right">Foto's</button>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="form-inline">
-                <div class="voorstelling-album"></div>
-
-                <a href="./album.php">
-                    <button class="voorstelling-album voorstelling-button">Meer foto's bekijken</button>
-                </a>
-            </div>
-
-            <a href="./voorstellingen.php">
-                <button class="button"> Alle voorstellingen </button>
-            </a>
         </article>
+
         <article class="col-md-6">
             <table class="col-12 voorstelling-tabel">
                 <?php $rolResult = mysqli_query($con, $rollenStatement);
@@ -69,7 +71,6 @@
                 <?php } ?>
             </table>
         </article>
-
     </section>
 </div>
 <?php include "./components/foot.php" ?>
