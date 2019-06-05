@@ -11,7 +11,7 @@
 
 ?>
 
-<div class="container">
+<div class="flex container">
     <?php while($row = mysqli_fetch_assoc($resStukken)){ ?>
     <section class="row stuk-row">
         <article class="col-xl-4 offset-xl-1 col-lg-5 col-md-12"

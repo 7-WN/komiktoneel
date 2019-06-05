@@ -296,29 +296,12 @@ label {
   text-align: center;
 }
 
-.stuk-flyer1 {
-  max-height: 350px;
-  width: 100%;
-  margin: 95px 0px;
-}
-
-.stuk-flyer2 {
-  max-height: 350px;
-  width: 100%;
-  margin: 170px 0px;
-}
-
-.stuk-flyer3 {
-  max-height: 350px;
-  width: 100%;
-  margin: 240px 0px;
-}
-
 .stuk-flyer {
   max-height: 350px;
   width: 100%;
   margin: 170px 0px;
 }
+
 .button-stuk {
   border: none;
   outline: 0;
