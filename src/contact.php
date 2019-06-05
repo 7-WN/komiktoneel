@@ -10,7 +10,7 @@
                 acteurs een complimentje te geven? Wilt u meehelpen achter de schermen of schuilt er een acteur in u?
                 Contacteer ons via dit formulier of onderstaande gegevens. </span>
         </p>
-        <form class="contactpage" action="php/mail.php">
+        <form class="contactpage" action="php/mail.php" method="POST">
             <div class="form-group contactpage col-8">
                 <label for="naam">Uw naam</label>
                 <input type="text" class="form-control" name="naam" placeholder="Hoe kunnen we u aanspreken?" />
@@ -26,7 +26,7 @@
                     placeholder="Hoe kunnen we u helpen?"></textarea>
             </div>
             <div class="form-group verzendknop contactpage">
-                <button type="submit" class="button">Verzenden</button>
+                <button type="submit" name="submit" class="button">Verzenden</button>
             </div>
         </form>
 
