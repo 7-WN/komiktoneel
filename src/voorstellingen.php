@@ -24,7 +24,12 @@
             <img class="stuk-flyer" src="<?= $row['flyer_path'] ?>" />
             <?php } ?>
         </article>
-        <div class="col-lg-2"></div>
+        <div class="col-lg-2 timeline">
+            <div class="timeline__group d-none d-lg-block">
+                <span class="timeline__year d-none d-lg-block">
+                    <?= $row['jaar']?></span>
+            </div>
+        </div>
         <article class="col-xl-4 col-lg-5 col-md-12<?php echo($row['stuk_id']%2 ? 'stuk-tekst' : 'stuk-flyer') ?>">
             <?php if($row['stuk_id']%2) { ?>
             <img class="stuk-flyer" src="<?= $row['flyer_path'] ?>" />
