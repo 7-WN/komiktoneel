@@ -23,6 +23,15 @@
       $postcode = 0;
       $plaats = 0;
     }
+    
+    /* MAILS */
+    $from = $MAIL_FROM_ADDRESS;
+    $to = $_POST['email'];
+    $subject = "Uw reservatie";
+    $message = "Uw reservatie voor ". $aantal . " op " . date("l jS F", strtotime($dag["dag"])) . " is verzonden!";
+    $headers = "From: " . $from;
+
+    mail($to, $subject, $message, $headers);
 
     $statement = 
       "INSERT INTO reservaties 

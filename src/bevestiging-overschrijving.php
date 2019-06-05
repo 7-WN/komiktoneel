@@ -1,6 +1,6 @@
 <?php 
 
-    $title = "Reservatie bevestigd!";
+    $title = "Reservatie verstuurd!";
     include('./components/head.php');
     include('./components/header.php');
 
