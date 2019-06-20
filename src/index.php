@@ -40,7 +40,7 @@
         <div class="hero-text2">
             <p>Volgend stuk</p>
             <p class="hero-stuk"><?= $stuk["titel"] ?></p>
-            <button class="button">Reserveer nu</button>
+            <button class="button"><a href="./reserveren.php">Reserveer nu</a></button>
         </div>
     </section>
 
